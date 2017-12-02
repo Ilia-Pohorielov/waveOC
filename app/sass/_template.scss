@@ -1,0 +1,20 @@
+$color-white: #ffffff;
+$color-black: #000000;
+$color-blue: #4595d4;
+$color-text: #3b4248;
+$color-gray-bg: #f3f4fa;
+$color-gray-text: #bebebe;
+$color-text-f: #aeb3b7;
+$color-bg-rose: #ebebf7;
+$color-bg-purple: #3949ab;
+$color-gray: #fafbfd;
+
+@mixin placeholder {
+  ::-webkit-input-placeholder {@content}
+  ::-moz-placeholder          {@content}
+  :-moz-placeholder           {@content}
+  :-ms-input-placeholder      {@content}
+}
+.wrapper {
+  max-width: 1560px; padding: 0 15px;
+}

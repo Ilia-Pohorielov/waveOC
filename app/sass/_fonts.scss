@@ -1,16 +1,7 @@
 @font-face {
-  font-family: 'Roboto';
-  src: url('./fonts/Roboto-Regular.eot');
-  src: url('./fonts/Roboto-Regular.eot?#iefix') format('embedded-opentype'),
-  url('./fonts/Roboto-Regular.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
   font-family: 'Gotham';
   src: url('./fonts/GothamPro-Bold.eot');
   src: url('./fonts/GothamPro-Bold.eot') format('embedded-opentype'),
-  url('./fonts/GothamPro-Bold.woff') format('woff'),
   url('./fonts/GothamPro-Bold.ttf') format('truetype'),
   url('./fonts/GothamPro-Bold.svg#GothamPro-Bold') format('svg');
   font-weight: bold;

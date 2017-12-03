@@ -15,6 +15,17 @@ $color-gray: #fafbfd;
   :-moz-placeholder           {@content}
   :-ms-input-placeholder      {@content}
 }
+
 .wrapper {
-  max-width: 1560px; padding: 0 15px;
+  max-width: 1560px; padding: 0 15px; margin: 0 auto;
 }
+
+/** BEGIN BTN STYLE **/
+.btn {
+  width: 100%; max-width: 166px; border-radius: 2px; text-align: center; text-transform: uppercase; color: $color-white; background: $color-blue; padding: 16px 0 17px;
+  height: auto; line-height: normal; letter-spacing: normal; font-size: 14px; font-weight: 500; box-shadow: none;
+  &.btn-white {
+    background: transparent; border: 1px solid $color-white; margin-top: 29px;
+  }
+}
+/** END BTN STYLE **/

@@ -1,0 +1,55 @@
+header {
+  position: relative;
+}
+.top-header {
+  position: fixed; top: 0; left: 0; right: 0; background: rgba($color-white, .1); border-bottom: 1px solid rgba($color-white, .2); z-index: 20;
+  .logo {
+    padding-top: 6px;
+    a {
+      width: 170px; display: inline-block; transition: all .5s linear; background-size: cover;
+      z-index: 10;
+    }
+  }
+  &.sticky {
+    top: 0!important; transition: all .5s linear; background: $color-white;
+    .logo a {
+      img { transform: scale(0); }
+      background-size: cover;
+    }
+    .header-menu {
+      ul li a {
+        color: $color-black;
+      }
+    }
+  }
+}
+.header-menu {
+  background: transparent; height: 78px; line-height: 78px; box-shadow: none; display: flex; align-items: baseline; justify-content: flex-end;
+  ul {
+    display: flex;
+    li {
+      a {
+        display: block; color: $color-white; font-weight: bold; text-transform: uppercase;
+      }
+    }
+  }
+}
+.header-image {
+  max-height: 736px; overflow: hidden; position: relative;
+  &:before {
+    content: ''; display: block; background: rgba($color-black, .3); position: absolute; left: 0; right: 0; height: 100%;
+  }
+  .description-header {
+    position: absolute; top: 50%; transform: translateY(-50%); text-align: center; font-size: 45px; font-weight: 500; color: $color-white; max-width: 1000px; margin: 0 auto; line-height: 55px;
+    left: 0; right: 0;
+  }
+  .partners {
+    position: absolute; bottom: 47px; left: 0; right: 0; max-width: 1530px; margin: 0 auto;
+    ul {
+      display: flex; justify-content: space-between;
+      li a {
+        display: block;
+      }
+    }
+  }
+}

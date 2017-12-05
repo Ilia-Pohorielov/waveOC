@@ -257,26 +257,33 @@ header {
   right: 0;
   background: rgba(255, 255, 255, 0.1);
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-  z-index: 20; }
+  z-index: 20;
+  -webkit-transition: all 0.3s cubic-bezier(0.39, 1.13, 1, 0.89);
+  transition: all 0.3s cubic-bezier(0.39, 1.13, 1, 0.89); }
   .top-header .logo {
-    padding-top: 6px; }
+    padding-top: 6px;
+    position: relative; }
     .top-header .logo a {
       width: 170px;
       display: inline-block;
-      -webkit-transition: all .5s linear;
-      transition: all .5s linear;
-      background-size: cover;
+      -webkit-transition: all 0.3s cubic-bezier(0.39, 1.13, 1, 0.89);
+      transition: all 0.3s cubic-bezier(0.39, 1.13, 1, 0.89);
       z-index: 10; }
-  .top-header.sticky {
-    top: 0 !important;
-    -webkit-transition: all .5s linear;
-    transition: all .5s linear;
-    background: #ffffff; }
-    .top-header.sticky .logo a {
-      background-size: cover; }
-      .top-header.sticky .logo a img {
+      .top-header .logo a .logo-sticky {
         -webkit-transform: scale(0);
-                transform: scale(0); }
+                transform: scale(0);
+        display: none; }
+  .top-header.sticky {
+    top: 0;
+    background: #ffffff; }
+    .top-header.sticky .logo a .logo-main {
+      -webkit-transform: scale(0);
+              transform: scale(0);
+      display: none; }
+    .top-header.sticky .logo a .logo-sticky {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      display: block; }
     .top-header.sticky .header-menu ul li a {
       color: #000000; }
 

@@ -2,19 +2,22 @@ header {
   position: relative;
 }
 .top-header {
-  position: fixed; top: 0; left: 0; right: 0; background: rgba($color-white, .1); border-bottom: 1px solid rgba($color-white, .2); z-index: 20;
+  position: fixed; top: 0; left: 0; right: 0; background: rgba($color-white, .1); border-bottom: 1px solid rgba($color-white, .2); z-index: 20; transition: all .3s cubic-bezier(0.39, 1.13, 1, 0.89);
   .logo {
-    padding-top: 6px;
+    padding-top: 6px; position: relative;
     a {
-      width: 170px; display: inline-block; transition: all .5s linear; background-size: cover;
+      width: 170px; display: inline-block; transition: all .3s cubic-bezier(0.39, 1.13, 1, 0.89);
       z-index: 10;
+      .logo-sticky {
+        transform: scale(0); display: none;
+      }
     }
   }
   &.sticky {
-    top: 0!important; transition: all .5s linear; background: $color-white;
+    top: 0; background: $color-white;
     .logo a {
-      img { transform: scale(0); }
-      background-size: cover;
+      .logo-main { transform: scale(0); display: none; }
+      .logo-sticky { transform: scale(1); display: block; }
     }
     .header-menu {
       ul li a {

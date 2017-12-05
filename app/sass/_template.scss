@@ -27,5 +27,8 @@ $color-gray: #fafbfd;
   &.btn-white {
     background: transparent; border: 1px solid $color-white; margin-top: 29px;
   }
+  &:hover, &:focus, &:active {
+    background: rgba($color-white, .2); box-shadow: none; color: $color-white;
+  }
 }
 /** END BTN STYLE **/

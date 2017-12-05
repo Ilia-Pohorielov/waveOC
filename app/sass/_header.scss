@@ -21,7 +21,15 @@ header {
     }
     .header-menu {
       ul li a {
-        color: $color-black;
+        color: rgba($color-black, .5);
+        &:hover, &:focus, &:active {
+          color: $color-black; box-shadow: 0 1px 0 $color-black;
+        }
+      }
+      .btn {
+        &:hover, &:focus, &:active {
+          background: rgba($color-black, .2); color: $color-black;
+        }
       }
     }
   }
@@ -32,7 +40,10 @@ header {
     display: flex;
     li {
       a {
-        display: block; color: $color-white; font-weight: bold; text-transform: uppercase;
+        display: block; color: rgba($color-white, .5); font-weight: bold; text-transform: uppercase; transition: all .3s ease; margin: 0 15px; padding: 0;
+        &:hover, &:focus, &:active {
+          background: transparent; box-shadow: 0 1px 0 $color-white; color: $color-white;
+        }
       }
     }
   }

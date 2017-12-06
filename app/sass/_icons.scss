@@ -21,34 +21,38 @@
 }
 
 
-.icon-arrow_left:before {
+.icon-arrow-down:before {
 	content: "\E001";
 }
 
-.icon-arrow_right:before {
+.icon-arrow_left:before {
 	content: "\E002";
 }
 
-.icon-experience:before {
+.icon-arrow_right:before {
 	content: "\E003";
 }
 
-.icon-global:before {
+.icon-experience:before {
 	content: "\E004";
 }
 
-.icon-lg:before {
+.icon-global:before {
 	content: "\E005";
 }
 
-.icon-linkedin:before {
+.icon-lg:before {
 	content: "\E006";
 }
 
-.icon-salesforce:before {
+.icon-linkedin:before {
 	content: "\E007";
 }
 
-.icon-sucessful:before {
+.icon-salesforce:before {
 	content: "\E008";
+}
+
+.icon-sucessful:before {
+	content: "\E009";
 }

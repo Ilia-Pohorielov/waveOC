@@ -15,7 +15,12 @@ $color-gray: #fafbfd;
   :-moz-placeholder           {@content}
   :-ms-input-placeholder      {@content}
 }
-
+main {
+  flex: 1;
+}
+.row {
+  margin: 0 -15px;
+}
 .wrapper {
   max-width: 1560px; padding: 0 15px; margin: 0 auto;
 }
@@ -25,7 +30,7 @@ $color-gray: #fafbfd;
   width: 100%; max-width: 166px; border-radius: 2px; text-align: center; text-transform: uppercase; color: $color-white; background: $color-blue; padding: 16px 0 17px;
   height: auto; line-height: normal; letter-spacing: normal; font-size: 14px; font-weight: 500; box-shadow: none;
   &.btn-white {
-    background: transparent; border: 1px solid $color-white; margin-top: 29px;
+    background: transparent; border: 1px solid $color-white;
   }
   &:hover, &:focus, &:active {
     background: rgba($color-white, .2); box-shadow: none; color: $color-white;

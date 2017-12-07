@@ -8,6 +8,8 @@ $color-text-f: #aeb3b7;
 $color-bg-rose: #ebebf7;
 $color-bg-purple: #3949ab;
 $color-gray: #fafbfd;
+$color-border: #dfe1ea;
+$color-blue-bg: #0077b5;
 
 @mixin placeholder {
   ::-webkit-input-placeholder {@content}
@@ -16,21 +18,35 @@ $color-gray: #fafbfd;
   :-ms-input-placeholder      {@content}
 }
 main {
-  flex: 1;
-}
-.row {
-  margin: 0 -15px;
+  flex: 1 0 auto;
 }
 .wrapper {
-  max-width: 1560px; padding: 0 15px; margin: 0 auto;
+  max-width: 1578px; padding: 0 15px; margin: 0 auto;
 }
-
+.title-block {
+  font-size: 35px; text-align: center; color: $color-text; font-weight: 500; margin-bottom: 47px;
+}
 /** BEGIN BTN STYLE **/
 .btn {
   width: 100%; max-width: 166px; border-radius: 2px; text-align: center; text-transform: uppercase; color: $color-white; background: $color-blue; padding: 16px 0 17px;
   height: auto; line-height: normal; letter-spacing: normal; font-size: 14px; font-weight: 500; box-shadow: none;
   &.btn-white {
     background: transparent; border: 1px solid $color-white;
+  }
+  &.btn-blue {
+    max-width: 133px; border: 1px solid $color-blue; background: transparent; color: $color-blue; font-size: 12px; padding: 13px;
+    &:hover, &:focus, &:active {
+      background: $color-blue; color: $color-white;
+    }
+  }
+  &.btn-linkedin {
+    background: transparent; border: 1px solid $color-white; max-width: 266px; position: relative; padding: 17px 25px 17px 80px; color: $color-white;
+    &:before {
+      content: '\E007'; font-family: "Icons"; position: absolute; top: 50%; left: 25px; transform: translateY(-50%); font-size: 20px;
+    }
+    &:after {
+      content: ''; width: 1px; display: block; height: 62%; background: rgba($color-white, .5); position: absolute; left: 70px; top: 50%; transform: translateY(-50%);
+    }
   }
   &:hover, &:focus, &:active {
     background: rgba($color-white, .2); box-shadow: none; color: $color-white;

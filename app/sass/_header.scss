@@ -77,7 +77,7 @@ header {
   .header-menu {
     background: transparent; height: 78px; line-height: 78px; box-shadow: none; display: flex; align-items: baseline; justify-content: flex-end;
     ul {
-      display: flex;
+      display: flex; justify-content: flex-end;
       li {
         a {
           display: block; color: rgba($color-white, .5); font-weight: bold; text-transform: uppercase; transition: all .3s ease; margin: 0 15px; padding: 0;
@@ -167,7 +167,7 @@ header {
           margin-right: 15px;
         }
         a {
-          display: block;
+          display: block; max-width: 204px;
         }
       }
     }

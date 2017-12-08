@@ -16,18 +16,20 @@ $(window).scroll(function() {
 /* end sticky-menu */
 
 /* begin accordion footer */
-$(".js-nav-title").click(function () {
-    var panel = this.nextElementSibling;
-    if (panel.style.maxHeight) {
-        panel.style.maxHeight = null;
-        panel.classList.remove("show");
-        $(this).removeClass('rotate');
-    } else {
-        panel.style.maxHeight = panel.scrollHeight + "%";
-        panel.classList.add("show");
-        $(this).addClass('rotate');
-    }
-});
+if ($(window).width() <= 767) {
+    $(window).on('resize', function () {
+        $('.js-nav-title').click(function() {
+            $(this).toggleClass("rotate");
+            $(this).next("ul").slideToggle();
+        });
+    });
+    $(window).on('load', function () {
+        $('.js-nav-title').click(function() {
+            $(this).toggleClass("rotate");
+            $(this).next("ul").slideToggle();
+        });
+    });
+}
 /* end accordion footer */
 /* begin mobile menu */
 $('.js-mobile-menu').on('click', function () {
@@ -64,11 +66,45 @@ if ($(window).width() > 767) {
     });
 }
 /*end height block */
-/*begin hover choosing*/
-$('.service-item').on('mouseenter',function () {
-    $(this).addClass('hover');
-});
-$('.service-item').on('mouseleave',function () {
-    $(this).removeClass('hover');
-});
+/*begin choosing mobile*/
+if ($(window).width() <= 1050) {
+    $(window).on('resize', function () {
+        $('.title-service').click(function() {
+            $(this).parents('.service-item').toggleClass("opened");
+            $(this).next(".description").slideToggle();
+        });
+    });
+    $(window).on('load', function () {
+        $('.title-service').click(function() {
+            $(this).parents('.service-item').toggleClass("opened");
+            $(this).next(".description").slideToggle();
+        });
+    });
+}
 /*end hover choosing*/
+/* begin initialize slick-slider */
+$('.js-slider-testimonial').slick({
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    responsive: [
+        {
+            breakpoint: 1200,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+                infinite: true
+            }
+        },
+        {
+            breakpoint: 767,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                infinite: true,
+                arrows: false
+            }
+        }
+    ]
+});
+/* end initialize slick-slider */

@@ -45,7 +45,7 @@ header {
   }
 }
 .hamburger-close {
-  position: absolute; width: 50px; height: 30px; cursor: pointer; display: none; top: 20px; right: 0;
+  position: absolute; width: 50px; height: 30px; cursor: pointer; display: none; top: 20px; right: 10px;
   i {
     display:block; height: 4px; width: 100%; position: absolute; top: 50%; margin-top: -2px; background: $color-black; transition: all .3s cubic-bezier(0.39, 1.13, 1, 0.89); opacity: 0;
   }
@@ -107,7 +107,7 @@ header {
     }
   }
   &.sticky {
-    top: 0; background: $color-white;
+    top: 0; background: $color-white; z-index: 40;
     .hamburger {
       i,&:before, &:after {
         background: $color-black;

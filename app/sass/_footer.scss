@@ -54,10 +54,7 @@ footer {
         }
       }
       @media (max-width: 767px) {
-        max-height: 0; visibility: hidden; opacity: 0; transition: all .3s linear;
-        &.show {
-          visibility: visible; opacity: 1;
-        }
+       display: none; transition: all .3s linear;
       }
     }
     &.nav-solution {

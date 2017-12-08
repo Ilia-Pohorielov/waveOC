@@ -10,6 +10,7 @@ $color-bg-purple: #3949ab;
 $color-gray: #fafbfd;
 $color-border: #dfe1ea;
 $color-blue-bg: #0077b5;
+$color-bg-block: #f6f7fb;
 
 @mixin placeholder {
   ::-webkit-input-placeholder {@content}
@@ -20,11 +21,14 @@ $color-blue-bg: #0077b5;
 main {
   flex: 1 0 auto;
 }
+.slick-loading .slick-list {
+  background: none;
+}
 .wrapper {
   max-width: 1578px; padding: 0 15px; margin: 0 auto;
 }
 .title-block {
-  font-size: 35px; text-align: center; color: $color-text; font-weight: 500; margin-bottom: 47px;
+  font-size: 35px; text-align: center; color: $color-text; font-weight: 500; margin-bottom: 47px; line-height: 30px;
 }
 /** BEGIN BTN STYLE **/
 .btn {

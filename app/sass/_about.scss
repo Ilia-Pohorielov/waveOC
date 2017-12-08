@@ -1,0 +1,36 @@
+.page-description {
+  position: absolute; top: 20%;
+  .block-annotation {
+    max-width: 675px;
+    .annotation {
+      color: $color-white; font-size: 18px; line-height: 26px;
+    }
+  }
+}
+.info-block {
+  display: flex; align-items: baseline; padding: 60px 0;
+  .title-info {
+    width: 43%;
+  }
+  .text {
+    width: 57%; font-size: 16px; line-height: 24px;
+  }
+}
+.block-philosophy {
+  background: $color-bg-rose; border-top: 1px solid rgba($color-text, .1);
+  .philosophy {
+    display: flex; flex-wrap: wrap; justify-content: space-between;
+    .philosophy-item {
+      background: $color-white; border-radius: 2px; border: 1px solid $color-border; padding: 30px; width: 32%; margin-bottom: 20px;
+      .top {
+        display: flex; align-items: center; margin-bottom: 23px; padding: 0 10px;
+        .image {
+          margin-right: 30px;
+        }
+      }
+      .description {
+        border-left: 2px solid $color-text; padding-left: 20px; font-size: 14px; line-height: 22px;
+      }
+    }
+  }
+}

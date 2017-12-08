@@ -44,23 +44,113 @@
 .icon-arrow_right:before {
   content: "\E003"; }
 
-.icon-experience:before {
+.icon-business_analyst:before {
   content: "\E004"; }
 
-.icon-global:before {
+.icon-client_centric:before {
   content: "\E005"; }
 
-.icon-lg:before {
+.icon-clip:before {
   content: "\E006"; }
 
-.icon-linkedin:before {
+.icon-competetive_rates:before {
   content: "\E007"; }
 
-.icon-salesforce:before {
+.icon-complete_transparency:before {
   content: "\E008"; }
 
-.icon-sucessful:before {
+.icon-crystal_clear:before {
   content: "\E009"; }
+
+.icon-data_integration:before {
+  content: "\E00A"; }
+
+.icon-data_modeling:before {
+  content: "\E00B"; }
+
+.icon-developer_upto3:before {
+  content: "\E00C"; }
+
+.icon-exceptional_professionalism:before {
+  content: "\E00D"; }
+
+.icon-experience:before {
+  content: "\E00E"; }
+
+.icon-expertise_ondiverse:before {
+  content: "\E00F"; }
+
+.icon-extensive_industry:before {
+  content: "\E010"; }
+
+.icon-flexible1:before {
+  content: "\E011"; }
+
+.icon-flexible2:before {
+  content: "\E012"; }
+
+.icon-flexible3:before {
+  content: "\E013"; }
+
+.icon-global:before {
+  content: "\E014"; }
+
+.icon-highly_scalable:before {
+  content: "\E015"; }
+
+.icon-innovations:before {
+  content: "\E016"; }
+
+.icon-innovative_solutions:before {
+  content: "\E017"; }
+
+.icon-in_depth:before {
+  content: "\E018"; }
+
+.icon-lg:before {
+  content: "\E019"; }
+
+.icon-linkedin:before {
+  content: "\E01A"; }
+
+.icon-logowave:before {
+  content: "\E01B"; }
+
+.icon-logo_map:before {
+  content: "\E01C"; }
+
+.icon-predictive_analitycs:before {
+  content: "\E01D"; }
+
+.icon-real_time:before {
+  content: "\E01E"; }
+
+.icon-salesforce:before {
+  content: "\E01F"; }
+
+.icon-security:before {
+  content: "\E020"; }
+
+.icon-senior_developer_upto2:before {
+  content: "\E021"; }
+
+.icon-strong_project:before {
+  content: "\E022"; }
+
+.icon-sucessful:before {
+  content: "\E023"; }
+
+.icon-team_lead:before {
+  content: "\E024"; }
+
+.icon-transparent_communication:before {
+  content: "\E025"; }
+
+.icon-true_partnership:before {
+  content: "\E026"; }
+
+.icon-unity:before {
+  content: "\E027"; }
 
 main {
   -webkit-box-flex: 1;
@@ -75,6 +165,7 @@ main {
   padding: 0 15px;
   margin: 0 auto; }
 
+/* BEGIN TITLE */
 .title-block {
   font-size: 35px;
   text-align: center;
@@ -83,6 +174,42 @@ main {
   margin-bottom: 47px;
   line-height: 30px; }
 
+.title {
+  font-size: 45px;
+  line-height: 42px;
+  font-weight: 500;
+  color: #ffffff;
+  margin-bottom: 70px; }
+
+.title-annotation {
+  font-size: 35px;
+  line-height: 45px;
+  color: #ffffff;
+  font-weight: 500;
+  margin-bottom: 32px; }
+
+.title-info {
+  font-size: 25px;
+  line-height: 18px;
+  font-weight: 500;
+  padding-bottom: 32px;
+  position: relative; }
+  .title-info:after {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 43px;
+    background: #3b4248;
+    position: absolute;
+    left: 0;
+    bottom: 0; }
+
+.title-item {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 500; }
+
+/* END TITLE */
 /** BEGIN BTN STYLE **/
 .btn {
   width: 100%;
@@ -147,6 +274,34 @@ main {
     color: #ffffff; }
 
 /** END BTN STYLE **/
+/* BEGIN BREADCRUMBS */
+.breadcrumbs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 12px; }
+  .breadcrumbs li {
+    position: relative; }
+    .breadcrumbs li a, .breadcrumbs li span {
+      display: block;
+      color: rgba(255, 255, 255, 0.6); }
+    .breadcrumbs li:not(:last-child) {
+      padding-right: 8px;
+      margin-right: 4px; }
+      .breadcrumbs li:not(:last-child):after {
+        content: '-';
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+                transform: translateY(-50%);
+        color: rgba(255, 255, 255, 0.6); }
+
+/*EMD BREADCRUMBS */
+.header-inner .header-image {
+  max-height: 647px; }
+
 html {
   height: 100%;
   -webkit-box-sizing: border-box;
@@ -1139,6 +1294,67 @@ header {
         .block-testimonials .slick-arrow.slick-prev {
           left: auto;
           right: 70px; } }
+
+.page-description {
+  position: absolute;
+  top: 20%; }
+  .page-description .block-annotation {
+    max-width: 675px; }
+    .page-description .block-annotation .annotation {
+      color: #ffffff;
+      font-size: 18px;
+      line-height: 26px; }
+
+.info-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  padding: 60px 0; }
+  .info-block .title-info {
+    width: 43%; }
+  .info-block .text {
+    width: 57%;
+    font-size: 16px;
+    line-height: 24px; }
+
+.block-philosophy {
+  background: #ebebf7;
+  border-top: 1px solid rgba(59, 66, 72, 0.1); }
+  .block-philosophy .philosophy {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+    .block-philosophy .philosophy .philosophy-item {
+      background: #ffffff;
+      border-radius: 2px;
+      border: 1px solid #dfe1ea;
+      padding: 30px;
+      width: 32%;
+      margin-bottom: 20px; }
+      .block-philosophy .philosophy .philosophy-item .top {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        margin-bottom: 23px;
+        padding: 0 10px; }
+        .block-philosophy .philosophy .philosophy-item .top .image {
+          margin-right: 30px; }
+      .block-philosophy .philosophy .philosophy-item .description {
+        border-left: 2px solid #3b4248;
+        padding-left: 20px;
+        font-size: 14px;
+        line-height: 22px; }
 
 footer {
   background: url("../assets/images/footer-bg-1.png") no-repeat, #3b4248 url("../assets/images/footer-bg-1.png") no-repeat;

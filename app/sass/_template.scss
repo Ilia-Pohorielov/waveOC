@@ -27,9 +27,26 @@ main {
 .wrapper {
   max-width: 1578px; padding: 0 15px; margin: 0 auto;
 }
+/* BEGIN TITLE */
 .title-block {
   font-size: 35px; text-align: center; color: $color-text; font-weight: 500; margin-bottom: 47px; line-height: 30px;
 }
+.title {
+  font-size: 45px; line-height: 42px; font-weight: 500; color: $color-white; margin-bottom: 70px;
+}
+.title-annotation {
+  font-size: 35px; line-height: 45px; color: $color-white; font-weight: 500; margin-bottom: 32px;
+}
+.title-info {
+  font-size: 25px; line-height: 18px; font-weight: 500; padding-bottom: 32px; position: relative;
+  &:after {
+    content: ''; display: block; height: 2px; width: 43px; background: $color-text; position: absolute; left: 0; bottom: 0;
+  }
+}
+.title-item {
+  font-size: 16px; line-height: 18px; font-weight: 500;
+}
+/* END TITLE */
 /** BEGIN BTN STYLE **/
 .btn {
   width: 100%; max-width: 166px; border-radius: 2px; text-align: center; text-transform: uppercase; color: $color-white; background: $color-blue; padding: 16px 0 17px;
@@ -57,3 +74,25 @@ main {
   }
 }
 /** END BTN STYLE **/
+/* BEGIN BREADCRUMBS */
+.breadcrumbs {
+  display: flex; font-size: 12px;
+  li {
+    position: relative;
+    a, span {
+      display: block; color: rgba($color-white, .6);
+    }
+    &:not(:last-child) {
+      padding-right: 8px; margin-right: 4px;
+      &:after {
+        content: '-'; display: block; position: absolute; right: 0; top: 50%; transform: translateY(-50%); color: rgba($color-white, .6);
+      }
+    }
+  }
+}
+/*EMD BREADCRUMBS */
+.header-inner {
+  .header-image {
+    max-height: 647px;
+  }
+}

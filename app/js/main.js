@@ -30,6 +30,8 @@ if ($(window).width() <= 767) {
         });
     });
 }
+
+
 /* end accordion footer */
 /* begin mobile menu */
 $('.js-mobile-menu').on('click', function () {

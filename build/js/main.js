@@ -43,8 +43,8 @@ $('.js-menu-close').on('click', function () {
 });
 /* end mobile menu */
 /* begin height block */
-function heightEL() {
-    var elH = document.getElementsByClassName("height");
+function heightEL(el) {
+    var elH = el;
     var maxHeight = 0;
     for (var i = 0; i < elH.length; ++i) {
         elH[i].style.height = "";
@@ -56,13 +56,16 @@ function heightEL() {
         elH[i].style.height = maxHeight + "px";
     }
 }
-heightEL();
+heightEL($('.testimonial-item.height'));
+heightEL($('.service-item .height'));
 if ($(window).width() > 767) {
     $(window).on('resize', function () {
-        heightEL();
+        heightEL($('.testimonial-item.height'));
+        heightEL($('.service-item .height'));
     });
     $(window).on('load', function () {
-        heightEL();
+        heightEL($('.testimonial-item.height'));
+        heightEL($('.service-item .height'));
     });
 }
 /*end height block */

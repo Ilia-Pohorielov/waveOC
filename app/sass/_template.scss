@@ -18,6 +18,18 @@ $color-bg-block: #f6f7fb;
   :-moz-placeholder           {@content}
   :-ms-input-placeholder      {@content}
 }
+body {
+  background: $color-white;
+}
+blockquote {
+  display: block; border-left: 2px solid $color-text; padding-left: 30px; font-size: 22px; line-height: 30px; margin: 24px 0;
+}
+a {
+  color: $color-text;
+  &:hover, &:focus, &:active {
+    color: $color-blue;
+  }
+}
 main {
   flex: 1 0 auto;
 }
@@ -33,14 +45,29 @@ main {
 }
 .title {
   font-size: 45px; line-height: 42px; font-weight: 500; color: $color-white; margin-bottom: 70px;
+  @media (max-width: 1460px) {
+    margin-bottom: 15px;
+  }
+  @media (max-width: 1350px) {
+    font-size: 30px; line-height: 35px;
+  }
 }
 .title-annotation {
-  font-size: 35px; line-height: 45px; color: $color-white; font-weight: 500; margin-bottom: 32px;
+  font-size: 35px; line-height: 45px; color: $color-white; font-weight: 500; margin-bottom: 10px;
+  @media (max-width: 1460px) {
+    margin-bottom: 15px;
+  }
+  @media (max-width: 1350px) {
+    font-size: 20px; line-height: 30px;
+  }
 }
 .title-info {
-  font-size: 25px; line-height: 18px; font-weight: 500; padding-bottom: 32px; position: relative;
+  font-size: 25px;  line-height: 30px; font-weight: 500; padding-bottom: 26px; position: relative;
   &:after {
     content: ''; display: block; height: 2px; width: 43px; background: $color-text; position: absolute; left: 0; bottom: 0;
+  }
+  @media (max-width: 600px) {
+    margin-bottom: 10px;
   }
 }
 .title-item {
@@ -93,6 +120,6 @@ main {
 /*EMD BREADCRUMBS */
 .header-inner {
   .header-image {
-    max-height: 647px;
+    max-height: 647px; padding: 0 0 34%;
   }
 }

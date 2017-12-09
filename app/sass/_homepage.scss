@@ -1,25 +1,32 @@
 .description-company {
   padding: 51px 0 61px;
-  .wrap {
-    max-width: 1366px; margin: 0 auto; padding: 0 15px; display: flex; align-items: center;
+  .wrapper {
+    display: flex; align-items: center;
     @media (max-width: 1366px) {
       justify-content: space-between;
     }
   }
   .image {
-    width: 41.5%;
+    width: 42%; text-align: center;
+    img {
+      display: inline-block;
+    }
   }
   .logo-company {
     max-width: 268px; margin-bottom: 40px;
+  }
+  .annotation {
+    font-size: 16px; line-height: 24px; width: 56%;
   }
   .description {
     font-size: 20px; line-height: 30px; width: 56%;
   }
   @media (max-width: 991px) {
+    padding: 30px 0;
     .image {
       display: none;
     }
-    .description {
+    .description, .annotation {
       width: 100%;
     }
   }

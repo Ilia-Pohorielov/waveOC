@@ -3,3 +3,4 @@
 //= plugins/slick.min.js
 //= plugins/materialize.min.js
 //= plugins/validate.js
+//= plugins/mask.js

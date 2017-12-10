@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <title>WaveOC</title>
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./css/all-plugins.css">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+<noscript>
+    <div><span>Для полной функциональности этого сайта необходимо включить JavaScript. Вот </span><a href="https://artjoker.ua/ru/blog/how-to-enable-javascript/" target="_blank">инструкции,</a>как включить JavaScript в вашем браузере. </div>
+</noscript>
+<header class="header-inner">
+    <div class="top-header js-sticky-menu">
+        <div class="wrapper header-container">
+            <div class="logo">
+                <a href="#">
+                    <img src="images/logo2.svg" class="logo-sticky" alt="#">
+                    <img src="images/logo.svg" class="logo-main" alt="#">
+                </a>
+            </div>
+            <nav class="header-menu">
+                <div class="hamburger-close js-menu-close">
+                    <i></i>
+                </div>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Service</a></li>
+                    <li><a href="#">Solutions</a></li>
+                    <li><a href="#">About us</a></li>
+                </ul>
+                <a href="#" class="btn btn-contact">Contact us</a>
+            </nav>
+            <div class="hamburger js-mobile-menu">
+                <i></i>
+            </div>
+        </div>
+    </div>
+    <div class="header-image" style="background-image: url('assets/images/bg-contact.png');">
+        <div class="wrapper">
+            <div class="page-description">
+                <div class="top-description">
+                    <ul class="breadcrumbs">
+                        <li><a href="#">Home</a></li>
+                        <li><span>Contact us</span></li>
+                    </ul>
+                    <div class="title">Contact us</div>
+                </div>
+                <div class="block-annotation">
+                    <div class="title-annotation">Turn your buisness ideas into cutting-edge and industry-changing  products with WaveOC competences</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<main>
+    <div class="contact-page">
+        <div class="wrapper">
+            <div class="contact-map">
+                <div id="map"></div>
+                <ul class="list-address">
+                    <li class="address-item js-location" data-location="{ lat: 39.638664, lng: -75.729024 }">
+                        <div class="title-address">North America</div>
+                        <div class="info-address">
+                            <ul>
+                                <li><span>Address</span><span class="text">2035 Sunse Lake Road Suite B-2 Newark, DE 19702</span></li>
+                                <li><span>Email</span><a href="mailto:info@waveoc.com">info@waveoc.com</a></li>
+                                <li><span>Phone</span><a href="tel:">+1 98 998 88 88</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="address-item js-location" data-location="{ lat: 38.638664, lng: -75.729024 }">
+                        <div class="title-address">Europe</div>
+                        <div class="info-address">
+                            <ul>
+                                <li><span>Address</span> <span class="text">2035 Sunse Lake Road Suite B-2 Newark, DE 19702</span></li>
+                                <li><span>Email</span><a href="mailto:info@waveoc.com">info@waveoc.com</a></li>
+                                <li><span>Phone</span><a href="tel:">+1 98 998 88 88</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="address-item js-location" data-location="{ lat: 37.638664, lng: -75.729024 }">
+                        <div class="title-address">Asia</div>
+                        <div class="info-address">
+                            <ul>
+                                <li><span>Address</span><span class="text">2035 Sunse Lake Road Suite B-2 Newark, DE 19702</span></li>
+                                <li><span>Email</span><a href="mailto:info@waveoc.com">info@waveoc.com</a></li>
+                                <li><span>Phone</span><a href="tel:">+1 98 998 88 88</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="feedback-form">
+                <div class="title-form">
+                    We are inspired by your ideas
+                    <div class="sub-title">
+                        Tell us about it. And we will turn it into a product that is worth a while
+                    </div>
+                </div>
+                <form action="/" class="js_validate">
+                    <div class="input-field">
+                        <label for="first_name">Name<sup>*</sup></label>
+                        <input id="first_name" type="text" required>
+                        <span class="error-text">Please, enter your name</span>
+                    </div>
+                    <div class="input-field">
+                        <label for="company">Company</label>
+                        <input id="company" type="text">
+                    </div>
+                    <div class="input-field field-email">
+                        <label for="email">Email<sup>*</sup></label>
+                        <input id="email" type="email" required data-validate="email">
+                        <span class="error-text">Please, enter your email</span>
+                    </div>
+                    <div class="input-field field-phone">
+                        <label for="phone">Phone<sup>*</sup></label>
+                        <input id="phone" type="text" required data-validate="phone" placeholder="+1 хх - ххх - хх - хх">
+                        <span class="error-text">Please, enter your phone</span>
+                    </div>
+                    <div class="input-field field-message">
+                        <label for="message">Your message</label>
+                        <textarea id="message" type="text"></textarea>
+                    </div>
+                    <div class="upload-user-file">
+                        <div class="label-file"> Attach files </div>
+                        <div class="upload-file-overlay" id="file">
+                            <label class="upload-link" for="download-file">Select a file</label>
+                            <input name="file" type="file" id="download-file" class="input-file" accept="application/pdf,application/msword,application/vnd.ms-excel,application/rtf">
+                            <div class="file-upload">
+                                <div class="text">
+                                    <span>Up to 5 attachments.</span>
+                                    <span>Acceptable formats of files: PDF, DOC, DOCX, XLS, XLSX, TXT, RTF, ODT</span>
+                                    The total size of attachments should not exceed 5 Mb
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-form">Submit</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</main>
+<footer>
+    <div class="wrapper">
+        <div class="title-footer">
+            <div class="text">
+                <span>Make a step to wards solid partnership and transparent business approach</span>
+                Fill in the  contact form to get ultimate solutions covering your company's needs
+            </div>
+            <a href="#" class="btn">Contact us</a>
+        </div>
+        <div class="top-footer">
+            <div class="footer-nav">
+                <div class="nav-item nav-service">
+                    <div class="nav-title js-nav-title">SERVICES</div>
+                    <ul>
+                        <li><a href="#">Dedicate Developer</a></li>
+                        <li><a href="#">Dedicate Team</a></li>
+                        <li><a href="#">Projects</a></li>
+                    </ul>
+                </div>
+                <div class="nav-item nav-solution">
+                    <div class="nav-title js-nav-title">SOLUTIONS</div>
+                    <ul>
+                        <li><a href="#">Enterprise Salesforse Migration and Implementation</a></li>
+                        <li><a href="#">Enterprise Buisness Optimization</a></li>
+                        <li><a href="#">Enterprise Marketing and Sales</a></li>
+                        <li><a href="#">Enterprise Platform and Application Development</a></li>
+                        <li><a href="#">Enterprise Management and Planning</a></li>
+                        <li><a href="#">Enterprise Customized Analystics</a></li>
+                    </ul>
+                </div>
+                <div class="nav-item nav-company">
+                    <div class="nav-title js-nav-title">COMPANY</div>
+                    <ul>
+                        <li><a href="#">About us</a></li>
+                        <li><a href="#">Contact us</a></li>
+                    </ul>
+                </div>
+                <div class="nav-item">
+                    <div class="nav-title js-nav-title">Contacts</div>
+                    <ul>
+                        <li>Email: <a href="mailto:branch1@mail.com">branch1@mail.com</a></li>
+                        <li>Phone: <a href="tel:99-898-898-767">99-898-898-767</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-logo">
+                <a href="#">
+                    <img src="images/logo-footer.svg" alt="#">
+                </a>
+            </div>
+        </div>
+        <div class="bottom-footer">
+            <div class="copyright">© 2017 WaveOC Pte Ltd. All rights reserved.</div>
+            <div class="development">Website development and support - Artjoker</div>
+        </div>
+    </div>
+</footer>
+<script type="application/javascript" src="js/all-plugins.js"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBEpfhWx-dh3KwS2bUR5KTBqxoLG4s2wWw&callback=initMap"></script>
+<script type="application/javascript" src="js/main.js"></script>
+</body>
+</html>

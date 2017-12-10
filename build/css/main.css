@@ -409,6 +409,13 @@ sup {
   line-height: 18px;
   font-weight: 500; }
 
+.title-inner {
+  font-size: 25px;
+  font-weight: 500;
+  text-align: center;
+  line-height: 30px;
+  margin-bottom: 40px; }
+
 /* END TITLE */
 /** BEGIN BTN STYLE **/
 .btn {
@@ -1689,6 +1696,72 @@ header {
           display: block; }
   .feedback-form .btn-form {
     max-width: 166px; }
+
+.custom-analytics {
+  background: #eceff1; }
+
+.block-information {
+  background: #eceff1; }
+
+.list-information .information-item .information-wrap {
+  max-width: 360px;
+  background: #ffffff;
+  border-radius: 2px;
+  border: 1px solid #dfe1ea;
+  padding: 44px 0 55px;
+  text-align: center; }
+  .list-information .information-item .information-wrap .image {
+    width: 83px;
+    height: 83px;
+    border-radius: 50%;
+    background: #3b4248;
+    border: 2px solid #dfe1ea;
+    text-align: center;
+    display: inline-block;
+    line-height: 75px;
+    margin-bottom: 25px; }
+    .list-information .information-item .information-wrap .image img {
+      display: inline-block;
+      vertical-align: middle; }
+  .list-information .information-item .information-wrap .description {
+    font-size: 18px;
+    font-weight: 500; }
+    .list-information .information-item .information-wrap .description span {
+      display: block; }
+
+.our-capabilities .capabilitie-item {
+  position: relative;
+  padding-bottom: 50px; }
+  .our-capabilities .capabilitie-item .image {
+    border-radius: 2px;
+    float: left;
+    margin-right: 60px; }
+  .our-capabilities .capabilitie-item .text {
+    height: 100%;
+    overflow: hidden;
+    font-size: 16px;
+    line-height: 24px; }
+    .our-capabilities .capabilitie-item .text .title-capabilitie {
+      font-size: 25px;
+      font-weight: 500;
+      margin-bottom: 40px; }
+    .our-capabilities .capabilitie-item .text .sub-title {
+      font-size: 18px;
+      font-weight: 500;
+      margin-bottom: 20px;
+      display: block; }
+    .our-capabilities .capabilitie-item .text .description {
+      margin-bottom: 30px; }
+    .our-capabilities .capabilitie-item .text .provide-text {
+      padding-left: 30px;
+      border-left: 2px solid #3b4248; }
+  .our-capabilities .capabilitie-item:after, .our-capabilities .capabilitie-item:before {
+    content: '';
+    display: block;
+    clear: both; }
+  .our-capabilities .capabilitie-item:not(:last-child) {
+    margin-bottom: 50px;
+    border-bottom: 1px solid #dfe1ea; }
 
 footer {
   background: url("../assets/images/footer-bg-1.png") no-repeat, #3b4248 url("../assets/images/footer-bg-1.png") no-repeat;

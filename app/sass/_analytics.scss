@@ -1,0 +1,55 @@
+.custom-analytics {
+  background: $color-bg-map;
+}
+.block-information {
+  background: $color-bg-map;
+}
+.list-information {
+  .information-item {
+    .information-wrap {
+      max-width: 360px; background: $color-white; border-radius: 2px; border: 1px solid $color-border; padding: 44px 0 55px; text-align: center;
+      .image {
+        width: 83px; height: 83px; border-radius: 50%; background: $color-text; border: 2px solid $color-border; text-align: center; display: inline-block; line-height: 75px; margin-bottom: 25px;
+        img {
+          display: inline-block; vertical-align: middle;
+        }
+      }
+      .description {
+        font-size: 18px; font-weight: 500;
+        span {
+          display: block;
+        }
+      }
+    }
+  }
+}
+.our-capabilities {
+  .capabilitie-item {
+    position: relative; padding-bottom: 50px;
+    .image {
+      border-radius: 2px; float: left; margin-right: 60px;
+    }
+    .text {
+      height: 100%; overflow: hidden; font-size: 16px; line-height: 24px;
+      .title-capabilitie {
+        font-size: 25px; font-weight: 500; margin-bottom: 40px;
+      }
+      .sub-title {
+        font-size: 18px; font-weight: 500; margin-bottom: 20px; display: block;
+      }
+      .description {
+        margin-bottom: 30px;
+      }
+      .provide-text {
+        padding-left: 30px; border-left: 2px solid $color-text;
+      }
+    }
+    &:after, &:before {
+      content: ''; display: block; clear: both;
+    }
+    &:not(:last-child) {
+      margin-bottom: 50px;
+      border-bottom: 1px solid $color-border;
+    }
+  }
+}

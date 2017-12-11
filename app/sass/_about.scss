@@ -40,7 +40,8 @@
       .top {
         display: flex; align-items: center; margin-bottom: 23px; padding: 0 22px; text-transform: uppercase;
         .image {
-          margin-right: 30px; width: 58px; height: 58px; border-radius: 50%; text-align: center; line-height: 58px; flex-shrink: 0; background: $color-text;
+          margin-right: 30px;
+          @include image-circle(58px,58px,58px,none);
           img {
             display: inline-block;
           }

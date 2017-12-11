@@ -12,7 +12,7 @@
   .information-item {
     width: 100%; max-width: 360px; background: $color-white; border-radius: 2px; border: 1px solid $color-border; padding: 44px 0 55px; text-align: center;
     .image {
-      width: 83px; height: 83px; border-radius: 50%; background: $color-text; border: 2px solid $color-border; text-align: center; display: inline-block; line-height: 75px; margin-bottom: 25px;
+      @include image-circle(83px, 83px,75px,2px solid $color-border); margin-bottom: 25px; display: inline-block;
       img {
         display: inline-block; vertical-align: middle;
       }
@@ -108,7 +108,7 @@
         font-size: 18px; font-weight: 500;
       }
       .image {
-        width: 72px; height: 72px; border-radius: 50%; background: $color-text; border: 2px solid $color-border; text-align: center; display: inline-block; line-height: 72px; flex-shrink: 0;
+        @include image-circle(72px,72px,72px,2px solid $color-border);
       }
     }
     @media (max-width: 991px) {

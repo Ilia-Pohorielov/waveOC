@@ -1,0 +1,85 @@
+.block-enterprise {
+  background: $color-bg-map; background-repeat: no-repeat; background-position: 0 100%; padding-top: 54px;  padding-bottom: 42px;
+  .list-enterprise {
+    display: flex; flex-wrap: wrap; justify-content: space-between;
+    .enterprise-item {
+      width: 32%; max-width: 490px; background: $color-white; border-radius: 2px; text-align: center; padding: 15px 0 35px; margin-bottom: 30px;
+      .image {
+        display: inline-block;    margin-bottom: 14px;
+      }
+      .title-enterprise {
+        font-size: 18px; font-weight: 500; text-transform: uppercase; padding: 0 10px;
+      }
+      @media (max-width: 991px) {
+        width: 49%; margin-bottom: 15px;
+      }
+      @media (max-width: 700px) {
+        width: 100%;
+      }
+    }
+    @media (max-width: 700px) {
+      justify-content: center;
+    }
+  }
+  .info-block {
+    padding: 36px 0 58px;
+    .title-info {
+      width: 34%;
+    }
+    .text {
+      width: 66%;
+      p:last-of-type {
+        margin-bottom: 33px;
+      }
+    }
+    @media (max-width: 600px) {
+      padding: 20px 0;
+      .title-info {
+        width: 100%;
+      }
+      .text {
+        width: 100%;
+      }
+    }
+  }
+}
+.block-expectation {
+  display: flex; padding: 104px 0 109px;
+  .title-expectation {
+    width: 34%; font-size: 25px; line-height: 32px; font-weight: 500; margin-right: 10px; flex-shrink: 0;
+  }
+  .expectation {
+    display: flex; width: 66%;
+    .expectation-item {
+      width: 25%; padding-left: 20px; border-left: 2px solid $color-text; font-size: 16px; line-height: 24px;
+      .count {
+        font-size: 50px; display: block; line-height: 48px; font-weight: 300; margin-top: 9px;
+      }
+    }
+    @media (max-width: 1300px) {
+      flex-wrap: wrap; justify-content: center;
+     .expectation-item {
+       width: 33.333%; margin-bottom: 10px;
+     }
+    }
+    @media (max-width: 991px) {
+      .expectation-item {
+        width: 50%;
+      }
+    }
+    @media (max-width: 460px) {
+      .expectation-item {
+        width: 100%;
+      }
+    }
+  }
+  @media (max-width: 767px) {
+    flex-wrap: wrap; padding: 25px 0;
+    .expectation {
+      width: 100%;
+    }
+    .title-expectation {
+      width: 100%; margin-right: 0; margin-bottom: 15px;
+    }
+  }
+}

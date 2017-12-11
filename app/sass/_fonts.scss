@@ -9,6 +9,16 @@
 }
 @font-face {
   font-family: 'Gotham';
+  src: url('./fonts/GothaProLig.eot');
+  src: url('./fonts/GothaProLig.eot') format('embedded-opentype'),
+  url('./fonts/GothaProLig.woff') format('woff'),
+  url('./fonts/GothaProLig.ttf') format('truetype'),
+  url('./fonts/GothaProLig.svg#GothaProMed') format('svg');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Gotham';
   src: url('./fonts/GothaProMed.eot');
   src: url('./fonts/GothaProMed.eot') format('embedded-opentype'),
   url('./fonts/GothaProMed.woff') format('woff'),

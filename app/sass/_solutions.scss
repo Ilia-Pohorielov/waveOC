@@ -3,12 +3,15 @@
   .list-enterprise {
     display: flex; flex-wrap: wrap; justify-content: space-between;
     .enterprise-item {
-      width: 32%; max-width: 490px; background: $color-white; border-radius: 2px; text-align: center; padding: 15px 0 35px; margin-bottom: 30px;
+      width: 32%; max-width: 490px; background: $color-white; border-radius: 2px; text-align: center; padding: 15px 0 35px; margin-bottom: 30px; transition: all .3s ease; border: 1px solid transparent;
       .image {
         display: inline-block;    margin-bottom: 14px;
       }
       .title-enterprise {
         font-size: 18px; font-weight: 500; text-transform: uppercase; padding: 0 10px;
+      }
+      &:hover, &:focus, &:active {
+        border-color: $color-blue;
       }
       @media (max-width: 991px) {
         width: 49%; margin-bottom: 15px;

@@ -1,15 +1,15 @@
 .outsource-project {
-  background: $color-bg-map; padding: 60px 0;
+  background: $color-bg-map; padding: 60px 0 80px;
+  @media (max-width: 600px) {
+    padding: 25px 0 25px;
+  }
 }
 .block-team {
-  background: $color-white; border: 1px solid $color-border; border-radius: 2px; padding: 50px 0 55px;
-  .team {
-    max-width: 1170px; margin: 0 auto;
-  }
+  background: $color-white; border: 1px solid $color-border; border-radius: 2px; padding: 44px 0 55px; margin-bottom: 54px;
   .team {
     display: flex; margin-bottom: 30px;
     .team-item {
-      width: 25%; border-right: 1px solid $color-border; text-align: center;
+      width: 25%; text-align: center;
       .image {
        display: inline-block; @include image-circle(83px,83px, 83px, 2px solid $color-border); margin-bottom: 27px;
         img {
@@ -19,17 +19,40 @@
       .description {
         font-size: 18px; font-weight: 500; padding: 0 10px;
       }
+      &:not(:last-child) {
+        border-right: 1px solid $color-border;
+      }
+    }
+    @media (max-width: 800px) {
+      flex-wrap: wrap; justify-content: center;
+      .team-item {
+        width: 50%; margin-bottom: 10px;
+        &:not(:nth-child(2n + 1)) {
+          border-right: none;
+        }
+      }
+    }
+    @media (max-width: 450px) {
+      .team-item {
+        width: 100%;
+        &:not(:nth-child(2n)) {
+          border-right: none;
+        }
+      }
     }
   }
   .description-team {
-    text-align: center; font-size: 16px; line-height: 24px;
+    text-align: center; font-size: 16px; line-height: 24px; padding: 0 10px;
+  }
+  @media (max-width: 800px) {
+    margin-bottom: 25px;
   }
 }
 .block-project {
   .project {
-    display: flex; justify-content: space-between; flex-wrap: wrap;
+    display: flex; justify-content: space-between; flex-wrap: wrap; margin-bottom: 58px;
     .project-item {
-      width: 100%; max-width: 490px; margin-bottom: 30px; position: relative; border-radius: 2px; overflow: hidden;
+      width: 32%; max-width: 490px; margin-bottom: 30px; position: relative; border-radius: 2px; overflow: hidden;
       &:before {
         content: ''; display: block; background: rgba($color-black, .5); position: absolute; left: 0; right: 0; height: 100%;
       }
@@ -40,9 +63,18 @@
         position: absolute; bottom: 0; color: $color-white; padding: 0 40px; transform: translateY(75%); transition: all 0.3s cubic-bezier(0.43, -0.04, 0.35, 0.73); z-index: 1;
         .title-project {
           font-size: 18px; font-weight: 500;  margin-bottom: 30px; text-transform: uppercase;
+          @media (max-width: 370px) {
+            margin-bottom: 20px;
+          }
         }
         .text {
           font-size: 14px; line-height: 22px; margin-bottom: 50px;
+          @media (max-width: 370px) {
+            margin-bottom: 20px;
+          }
+        }
+        @media (max-width: 600px) {
+          padding: 0 15px; transform: translateY(77%);
         }
       }
       &:hover, &:focus, &:active {
@@ -51,6 +83,23 @@
         }
         .description {
           transform: translateY(0);
+        }
+      }
+    }
+    @media (max-width: 1160px) {
+      justify-content: center; margin-bottom: 0;
+      .project-item {
+        width: 49%;
+        &:not(:nth-child(2n)) {
+          margin-right: 15px;
+        }
+      }
+    }
+    @media (max-width: 780px) {
+      .project-item {
+        width: 100%;
+        &:not(:nth-child(2n)) {
+          margin-right: 0;
         }
       }
     }
@@ -64,9 +113,9 @@
 }
 .block-description {
   .wrap {
-    max-width: 1300px; padding: 0 15px; display: flex; margin: 0 auto; justify-content: space-between;
+    max-width: 1320px; padding: 0 15px; display: flex; margin: 0 auto; justify-content: space-between;
     .left-block, .right-block {
-      width: 50%;
+      width: 49.4%;
       .text {
         font-size: 16px; line-height: 24px; display: inline-block; color: rgba($color-white, .8);
       }
@@ -74,7 +123,7 @@
     .left-block {
       width: 40%;
       .title-description {
-        font-size: 30px; font-weight: 500; margin-bottom: 35px;
+        font-size: 30px; font-weight: 500; margin-bottom: 25px;
       }
     }
     .right-item {
@@ -85,10 +134,32 @@
       .image {
         flex-shrink: 0; margin-right: 20px;
       }
+      @media (max-width: 600px) {
+        flex-direction: column; justify-content: center;
+        .image {
+          margin: 0 0 15px;
+        }
+      }
+    }
+    @media (max-width: 800px) {
+      flex-direction: column;
+      .left-block {
+        margin-bottom: 20px;
+      }
+      .left-block, .right-block {
+        width: 100%;
+      }
+    }
+  }
+  &.project-description {
+    padding: 95px 0 75px; margin-bottom: 54px;
+    @media (max-width: 991px) {
+      padding: 25px 0;
     }
   }
 }
 .block-benefits {
+  margin-bottom: 31px;
   .benefits {
     display: flex; flex-wrap: wrap;
     .benefits-item {
@@ -102,21 +173,176 @@
       &:not(:nth-child(3n)) {
         margin-right: 30px;
       }
+      @media (max-width: 1530px) {
+        &:not(:nth-child(3n)) {
+          margin-right: 25px;
+        }
+      }
+      @media (max-width: 1279px) {
+        &:not(:nth-child(3n)) {
+          margin-right: 15px;
+        }
+      }
+      @media (max-width: 991px) {
+        width: 49%;
+        &:not(:nth-child(3n)) {
+          margin-right: 0;
+        }
+        &:not(:nth-child(2n)) {
+          margin-right: 15px;
+        }
+      }
+      @media (max-width: 760px) {
+        width: 100%;
+        &:not(:nth-child(2n)) {
+          margin-right: 0;
+        }
+      }
+    }
+    @media (max-width: 991px) {
+      justify-content: center;
     }
   }
 }
 .block-offer {
-  position: relative;
+  position: relative; margin-bottom: 71px;
   .bg-offer {
-    padding: 0 0 30.7%; background-size: cover; background-position: 50% 50%; background-attachment: fixed; background-repeat: no-repeat;
+    padding: 0 0 30.7%; background-size: cover; background-position: 50% 50%; background-attachment: fixed; background-repeat: no-repeat; position: relative; min-height: 530px;
+    &:before {
+      content: ''; display: block; position: absolute; top: 0; left: 0; right: 0; height: 100%; background: rgba($color-black, .3);
+    }
   }
   .title-offer {
-    font-size: 35px; font-weight: 500; line-height: 34px; color: $color-white; padding-top: 100px; position: relative; text-align: center;
+    font-size: 35px; font-weight: 500; line-height: 34px; color: $color-white; padding-top: 100px; position: relative; text-align: center; max-width: 625px; margin: 0 auto 80px auto;
     &:before {
       content: ''; display: block; position: absolute; top: 0; left: 50%; transform: translateX(-50%); background: url("../images/logo-title.svg")no-repeat 0 0; width: 66px; height: 76px; background-size: contain;
     }
+    @media (max-width: 600px) {
+      font-size: 25px;
+    }
   }
   .offer-content {
-    position: absolute; top: 20%; left: 0; right: 0; max-width: 620px; margin: 0 auto;
+    position: absolute; top: 9.3%; left: 0; right: 0;
+    @media (max-width: 1100px) {
+      top: 2.3%;
+    }
+  }
+  .offer-table {
+    position: relative; padding-left: 15.66%; overflow: hidden; margin-top: -255px;
+    .left-sidebar {
+      position: absolute; top: 14%; left: 0; max-width: 242px; width: 15.7%;
+      ul {
+        border: 1px solid $color-border;
+        li {
+          padding-left: 30px; background: $color-white; font-size: 16px; font-weight: 500; height: 63.6px;
+          .text {
+            z-index: 2; position: relative; display: inline-block; vertical-align: middle;
+          }
+          &:before {
+            content: ''; display: inline-block; vertical-align: middle; min-height: 100%;
+          }
+          &:not(:last-child) {
+            border-bottom: 1px solid $color-border;
+          }
+        }
+      }
+    }
+    @media (max-width: 1100px) {
+      padding-left: 0;
+      .left-sidebar {
+        display: none;
+      }
+    }
+  }
+  .table {
+    display: flex; background: $color-white; border-top: 1px solid $color-border; border-right: 1px solid $color-border; border-bottom: 1px solid $color-border;
+    .table-item {
+      &:not(:last-child) {
+        border-right: 1px solid $color-border;
+      }
+    }
+    .table-title {
+      background: $color-gray-title; text-align: center; padding: 20px 0 23px; font-weight: bold; font-size: 16px; border-bottom: 1px solid $color-border;
+    }
+    .row-table {
+      padding-left: 40px; font-size: 16px; border-bottom: 1px solid $color-border; height: 64px; position: relative;
+      .text {
+        line-height: 22px; display: inline-block; vertical-align: middle; width: 97%; position: relative; z-index: 2;
+      }
+      &.price {
+        font-weight: 500;
+      }
+      &:before {
+        content: ''; display: inline-block; vertical-align: middle; min-height: 100%;
+      }
+      &:after {
+        content: ''; display: block; position: absolute; top: 0; left: 0; right: 0; background: $color-gray-title; height: 100%; margin: 0 -5000px; padding: 0 5000px; opacity: 0; transition: all 0.3s cubic-bezier(0.43, -0.04, 0.35, 0.73); z-index: 0;
+      }
+      &:hover, &:focus, &:active {
+        &:after {
+          opacity: 1;
+        }
+      }
+      @media (max-width: 1100px) {
+        padding-left: 15px;
+        .text:before {
+          font-size: 16px; font-weight: 500;
+        }
+        &:first-child .text {
+          &:before {
+            content: 'Time Period: ';
+          }
+        }
+        &:nth-child(2) .text {
+          &:before {
+            content: 'Scalability: ';
+          }
+        }
+        &:nth-child(3) .text {
+          &:before {
+            content: 'Availability: ';
+          }
+        }
+        &:nth-child(4) .text {
+          &:before {
+            content: 'Deliverables: ';
+          }
+        }
+        &.price:last-child .text {
+          &:before {
+            content: 'Price: ';
+          }
+        }
+      }
+    }
+    .table-footer {
+      background: $color-gray-title; text-align: center; padding: 17px 0;
+      .btn {
+        max-width: 133px; font-size: 12px; padding: 14px 0;
+      }
+    }
+    @media (max-width: 1100px) {
+      border: none; flex-wrap: wrap; justify-content: center;
+      .table-item {
+        width: 50%; border: 1px solid $color-border; margin-bottom: 10px;
+        &:not(:nth-child(2n)) {
+          border-right: none;
+        }
+        &:last-child {
+          border-right: 1px solid $color-border;
+        }
+      }
+    }
+    @media (max-width: 767px) {
+      .table-item {
+        width: 100%;
+        .row-table {
+          height: 75px;
+        }
+        &:not(:nth-child(2n)) {
+          border-right: 1px solid $color-border;
+        }
+      }
+    }
   }
 }

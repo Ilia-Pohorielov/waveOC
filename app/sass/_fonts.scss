@@ -37,3 +37,12 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: 'Gotham';
+  src: url('./fonts/GothamPro-Bold.eot');
+  src: url('./fonts/GothamPro-Bold.eot') format('embedded-opentype'),
+  url('./fonts/GothamPro-Bold.ttf') format('truetype'),
+  url('./fonts/GothamPro-Bold.svg#GothamPro-Bold') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}

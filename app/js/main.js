@@ -112,9 +112,8 @@ $('.js-slider-testimonial').slick({
 });
 /* end initialize slick-slider */
 /* initialize google map */
-function initMap(location) {
-    var loc = location;
-    var coordinates = { lat: 39.638664, lng: -75.729024 };
+function initMap(lat, lng) {
+    var coordinates = { lat: lat||39.638664, lng: lng||-75.729024 };
     var map = new google.maps.Map(document.getElementById('map'), {
         center: coordinates,
         zoom: 10
@@ -129,10 +128,22 @@ function initMap(location) {
 $('.js-location').on('click', function () {
     $(this).toggleClass('active');
     $(this).siblings().removeClass('active');
-    var location = $(this).attr('data-location');
-    initMap(location);
+    var lat = Number($(this).attr('data-lat'));
+    var lng = Number($(this).attr('data-lng'));
+    initMap(lat, lng);
 });
 /* validation form */
 $('.js_validate [type="submit"]').on("click", function () {
     return validate($(this).parents(".js_validate"));
+});
+/* upload file */
+var file_input = $('#download-file');
+file_input.on('change',function(e) {
+    var files = this.files;
+    for(var i = 0; i < files.length; i++) {
+        $('<div class="upload-link">'+files[i].name+'<div class="remove js-remove">X</div></div>').appendTo('.uploads');
+    }
+});
+$('body').on('click', '.js-remove', function () {
+   $(this).parent().remove();
 });

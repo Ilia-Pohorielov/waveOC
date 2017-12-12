@@ -1,0 +1,29 @@
+.page-404 {
+  background: $color-bg-map; padding: 188px 0 140px;
+  .content {
+    max-width: 780px; margin: 0 auto; text-align: center; padding: 0 15px;
+    .image {
+      display: inline-block; margin-bottom: 40px;
+    }
+    .title-404 {
+      font-size: 45px; font-weight: 500; line-height: 42px; margin-bottom: 30px;
+    }
+    .description {
+      font-size: 20px; line-height: 28px; margin-bottom: 24px;
+    }
+    .btn {
+      max-width: 186px;
+    }
+    @media (max-width: 600px) {
+      .title-404 {
+        font-size: 25px; line-height: 30px;
+      }
+      .description {
+        font-size: 18px; line-height: 22px;
+      }
+    }
+  }
+  @media (max-width: 600px) {
+    padding: 100px 0 60px;
+  }
+}

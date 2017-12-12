@@ -176,3 +176,25 @@ header {
     }
   }
 }
+.header-404 {
+  .top-header {
+    background: $color-white;
+    .hamburger {
+      i,&:before, &:after {
+        background: $color-black;
+      }
+    }
+    .logo a {
+      .logo-main { transform: scale(0); display: none; }
+      .logo-sticky { transform: scale(1); display: block; }
+    }
+    .header-menu {
+      ul li a {
+        color: rgba($color-black, .5);
+        &:hover, &:focus, &:active {
+          color: $color-black; box-shadow: 0 1px 0 $color-black;
+        }
+      }
+    }
+  }
+}

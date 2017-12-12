@@ -62,7 +62,7 @@
             <div class="contact-map">
                 <div id="map"></div>
                 <ul class="list-address">
-                    <li class="address-item js-location" data-location="{ lat: 39.638664, lng: -75.729024 }">
+                    <li class="address-item js-location" data-lat="39.638664" data-lng="-75.729024">
                         <div class="title-address">North America</div>
                         <div class="info-address">
                             <ul>
@@ -72,7 +72,7 @@
                             </ul>
                         </div>
                     </li>
-                    <li class="address-item js-location" data-location="{ lat: 38.638664, lng: -75.729024 }">
+                    <li class="address-item js-location" data-lat="39.938664" data-lng="-75.829024">
                         <div class="title-address">Europe</div>
                         <div class="info-address">
                             <ul>
@@ -82,7 +82,7 @@
                             </ul>
                         </div>
                     </li>
-                    <li class="address-item js-location" data-location="{ lat: 37.638664, lng: -75.729024 }">
+                    <li class="address-item js-location" data-lat="39.638664" data-lng="-75.729024">
                         <div class="title-address">Asia</div>
                         <div class="info-address">
                             <ul>
@@ -127,10 +127,12 @@
                     </div>
                     <div class="upload-user-file">
                         <div class="label-file"> Attach files </div>
-                        <div class="upload-file-overlay" id="file">
+                        <div class="upload-file-overlay files-wr" id="file">
                             <label class="upload-link" for="download-file">Select a file</label>
-                            <input name="file" type="file" id="download-file" class="input-file" accept="application/pdf,application/msword,application/vnd.ms-excel,application/rtf">
+                            <input name="file" type="file" id="download-file" class="input-file" multiple>
+                            <!--accept="application/pdf,application/msword,application/vnd.ms-excel,application/rtf"-->
                             <div class="file-upload">
+                                <div class="uploads"></div>
                                 <div class="text">
                                     <span>Up to 5 attachments.</span>
                                     <span>Acceptable formats of files: PDF, DOC, DOCX, XLS, XLSX, TXT, RTF, ODT</span>

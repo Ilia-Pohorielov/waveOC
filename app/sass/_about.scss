@@ -17,7 +17,7 @@
   }
 }
 .info-block {
-  display: flex; align-items: self-start; padding: 52px 0 58px;
+  display: flex; align-items: flex-start; padding: 52px 0 58px;
   .title-info {
     width: 42%;
   }
@@ -36,7 +36,8 @@
   .philosophy {
     display: flex; flex-wrap: wrap; justify-content: space-between;
     .philosophy-item {
-      background: $color-white; border-radius: 2px; border: 1px solid $color-border; padding: 21px 30px; width: 31.6%; margin-bottom: 60px; margin-right: 18px;
+      background: $color-white; border-radius: 2px; border: 1px solid $color-border; padding: 21px 30px; width: 31.6%; margin-bottom: 60px; margin-right: 18px; transition: all .4s cubic-bezier(0.13, 0.12, 0.88, 0.9);
+      opacity: 0; transform: translateY(20%);
       .top {
         display: flex; align-items: center; margin-bottom: 23px; padding: 0 22px; text-transform: uppercase;
         .image {
@@ -46,16 +47,28 @@
             display: inline-block;
           }
         }
+        @media (max-width: 400px) {
+          padding: 0;
+          .image {
+            margin-right: 10px;
+          }
+        }
       }
       .description {
         border-left: 2px solid $color-text; padding-left: 20px; font-size: 14px; line-height: 22px;
       }
+      @include animation-delay(6, .3);
       @media (max-width: 1200px) {
         width: 49%; margin-right: 0;
       }
       @media (max-width: 600px) {
         width: 100%; margin-bottom: 15px;
       }
+    }
+  }
+  &.animated {
+    .philosophy-item {
+      opacity: 1; transform: translateY(0);
     }
   }
   @media (max-width: 767px) {
@@ -79,4 +92,20 @@
       }
     }
   }
+}
+.block-mission {
+  .info-block {
+    padding: 52px 0 54px;
+  }
+  .text {
+    opacity: 0; transform: translateY(20%); transition: all .3s cubic-bezier(0.13, 0.12, 0.88, 0.9);
+  }
+  &.animated {
+    .text {
+      opacity: 1; transform: translateY(0);
+    }
+  }
+}
+.description-company.about {
+  padding: 40px 0 56px;
 }

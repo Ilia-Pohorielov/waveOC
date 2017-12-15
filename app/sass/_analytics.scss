@@ -108,7 +108,7 @@
         font-size: 18px; font-weight: 500;
       }
       .image {
-        @include image-circle(72px,72px,72px,2px solid $color-border);
+        @include image-circle(72px,72px,72px,none);
       }
     }
     @media (max-width: 991px) {

@@ -1,5 +1,5 @@
 .description-company {
-  padding: 51px 0 61px;
+  padding: 51px 0 56px;
   .wrapper {
     display: flex; align-items: center;
     @media (max-width: 1366px) {
@@ -7,19 +7,19 @@
     }
   }
   .image {
-    width: 42%; text-align: center;
+    width: 42%; text-align: center; opacity: 0; transform: translateY(10%); transition: all .4s cubic-bezier(0.13, 0.12, 0.88, 0.9);
     img {
       display: inline-block;
     }
   }
   .logo-company {
-    max-width: 268px; margin-bottom: 40px;
+    max-width: 268px; margin-bottom: 40px; opacity: 0; transform: translateY(10%); transition: all .4s .3s cubic-bezier(0.13, 0.12, 0.88, 0.9);
   }
   .annotation {
-    font-size: 16px; line-height: 24px; width: 56%;
+    font-size: 16px; line-height: 24px; width: 56%; opacity: 0; transform: translateY(10%); transition: all .4s .4s cubic-bezier(0.13, 0.12, 0.88, 0.9);
   }
   .description {
-    font-size: 20px; line-height: 30px; width: 56%;
+    font-size: 20px; line-height: 30px; width: 56%; opacity: 0; transform: translateY(10%);  transition: all .4s .4s cubic-bezier(0.13, 0.12, 0.88, 0.9);
   }
   @media (max-width: 991px) {
     padding: 30px 0;
@@ -30,9 +30,23 @@
       width: 100%;
     }
   }
+  &.animated {
+    .image {
+      opacity: 1; transform: translateY(0);
+    }
+    .annotation {
+      opacity: 1; transform: translateY(0);
+    }
+    .logo-company {
+      opacity: 1; transform: translateY(0);
+    }
+    .description {
+      opacity: 1; transform: translateY(0);
+    }
+  }
 }
 .why-control {
-  background: $color-gray-bg; border-top: 1px solid $color-border; border-bottom: 1px solid $color-border; padding: 63px 0 60px; margin-bottom: 63px;
+  background: $color-gray-bg; border-top: 1px solid $color-border; border-bottom: 1px solid $color-border; padding: 58px 0 54px; margin-bottom: 58px;
   .info-container {
     display: flex; flex-wrap: wrap;
   }
@@ -44,7 +58,7 @@
   }
   .info-item {
     max-width: 360px; display: flex; align-items: center; padding: 19px; border-radius: 2px; background: $color-white; border: 1px solid $color-border;
-    margin-bottom: 28px; width: 100%;
+    margin-bottom: 28px; width: 100%; transform: scale(0); transition: all .4s cubic-bezier(0.13, 0.12, 0.88, 0.9);
     .image {
       width: 83px; height: 83px; border-radius: 50%; border: 1px solid #c2c2c2; background: $color-text; line-height: 100px; flex: 0 0 auto; position: relative; margin-right: 27px;
       img {
@@ -63,9 +77,26 @@
     &:nth-child(2n + 1) {
       margin-right: 30px;
     }
+    &:last-child { transition-delay: .4s; }
+  }
+  .bottom-info {
+    .info-item:first-child {
+      transition-delay: .6s;
+    }
+    .info-item:last-child {
+      transition-delay: .8s;
+    }
   }
   .text {
-    font-size: 20px; line-height: 30px; clear: both;
+    font-size: 20px; line-height: 30px; clear: both; opacity: 0; transform: translateY(10%); transition: all .4s .8s cubic-bezier(0.13, 0.12, 0.88, 0.9); margin-top: -14px;
+  }
+  &.animated {
+    .info-item {
+      transform: scale(1);
+    }
+    .text {
+      opacity: 1; transform: translateY(0);
+    }
   }
   @media (max-width: 1200px) {
     .wrapper {
@@ -109,18 +140,24 @@
 .our-services {
   position: relative; margin-bottom: 58px;
   &:before {
-    content: ''; display: block; width: 100%; position: absolute; top: 50%; transform: translateY(-50%); background: url("../assets/images/bg-services.png")no-repeat 0 0; height: 273px; z-index: -1;
+    content: ''; display: block; width: 0; position: absolute; top: 50%; transform: translateY(-50%); background: url("../assets/images/bg-services.png")no-repeat 0 0; height: 273px; z-index: -1;
+    transition: all 2s .5s cubic-bezier(0.13, 0.12, 0.88, 0.9);
   }
   .services {
     transform: perspective(1px); display: flex; justify-content: space-between; margin-bottom: 41px;
     @media (max-width: 991px) {
       flex-wrap: wrap; justify-content: center;
     }
+    &.test {
+      .service-item {
+        width: 20%;
+      }
+    }
   }
   .service-item {
-    border-radius: 2px; border: 1px solid $color-border; padding: 30px 0 0; max-width: 490px; width: 100%; background: $color-white;
+    border-radius: 2px; border: 1px solid $color-border; padding: 30px 0 0; max-width: 490px; width: 100%; background: $color-white; position: relative;
     .title-service {
-      font-size: 25px; font-weight: 500; line-height: 18px; text-align: center; max-width: 300px; margin: 0 auto 20px auto;
+      font-size: 25px; font-weight: 500; line-height: 18px; text-align: center; max-width: 300px; margin: 0 auto 29px auto;
       .sub-title {
         font-size: 16px; color: rgba($color-text, .5); display: block; margin-top: 10px;
       }
@@ -157,11 +194,11 @@
     }
   }
   .block-linkedin {
-    background: $color-blue-bg; position: relative; padding: 70px 0 57px; text-align: center; border-radius: 2px;
+    background: $color-blue-bg; position: relative; padding: 62px 0 57px; text-align: center; border-radius: 2px;
     .description-block {
-      font-size: 35px; font-weight: 500; color: $color-white; line-height: 35px;
+      font-size: 35px; font-weight: 500; color: $color-white; line-height: 35px; transform: perspective(1px);
       .text {
-        margin-bottom: 38px;
+        margin-bottom: 30px;
       }
     }
     .left-photo, .right-photo {
@@ -173,14 +210,23 @@
     .right-photo {
       left: auto; right: 50px;
     }
+    .left-photo .photo-item {
+      @include animation-delay(5, .2);
+    }
+    .right-photo .photo-item {
+      @include animation-delay(5, .4);
+    }
     .photo-item {
-      border-radius: 4px; position: relative;
+      border-radius: 4px; position: relative; transform: scale(0); transition: all .3s cubic-bezier(0.13, 0.12, 0.88, 0.9);
       &.middle {
         align-self: center;
       }
       &.double {
         img:first-child {
           margin-bottom: 20px;
+        }
+        img {
+          @include animation-delay(5, .2);
         }
       }
       &.top {
@@ -193,18 +239,37 @@
         content: ''; display: block; background: rgba($color-blue-bg, .43); position: absolute; left: 0; right: 0; height: 100%;
       }
     }
+    &.animated {
+      .photo-item {
+        transform: scale(1);
+      }
+    }
+    @media (max-width: 1200px) {
+      .description-block .text {
+        text-shadow: 0 1px 1px rgba($color-black, .3);
+      }
+      .btn-linkedin {
+        background: $color-blue-bg;
+      }
+    }
+  }
+  &.animated {
+    &:before {
+      width: 100%;
+    }
   }
 }
 .block-choosing {
-  position: relative; background-size: cover; background-position: 50% 50%; background-repeat: no-repeat;
+  position: relative; background-size: cover; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-position: center center; background-repeat: no-repeat;
+  -webkit-overflow-scrolling: touch;
   .choosing-service {
-    display: flex; min-height: 805px;
+    display: -webkit-flex;  display: -moz-flex; display: -ms-flex; display: -o-flex; display: flex; height: 805px;
     .service-item {
       position: relative; padding: 0; width: 25%;
       .service-description {
         position: relative; top: 17%; left: 0; padding-left: 13%;
         .title-service {
-          font-size: 40px; line-height: 43px; font-weight: 500; color: $color-white; padding-top: 100px; margin-bottom: 25px; position: relative;
+          font-size: 40px; line-height: 43px; font-weight: 500; color: $color-white; padding-top: 100px; margin-bottom: 25px; position: relative; z-index: 2;
           &:before {
             content: ''; display: block; position: absolute; top: 0; left: 13px; background: url("../images/icons/lg.svg")no-repeat 0 0; width: 52px; height: 64px; background-size: cover;
           }
@@ -218,9 +283,9 @@
         }
       }
       .btn-round {
-        display: block; width: 48px; height: 48px; line-height: 46px; border: 2px solid rgba($color-white, .7); border-radius: 50%; text-align: center; position: absolute; bottom: 33px; left: 13%; cursor: pointer;
+        display: block; width: 48px; height: 48px; line-height: 48px; border: 2px solid rgba($color-white, .7); border-radius: 50%; text-align: center; position: absolute; bottom: 40px; left: 13%; cursor: pointer; z-index: 0;
         &:before {
-          content: '+'; color: $color-white; font-size: 28px; display: inline-block; transition: all .3s cubic-bezier(0.39, 1.13, 1, 0.89);
+          content: ''; color: $color-white; width: 14px; height: 14px; background: url("../images/add.svg")no-repeat 0 0 /contain; display: inline-block; transition: all .3s cubic-bezier(0.39, 1.13, 1, 0.89);
         }
       }
       &:before {
@@ -242,7 +307,7 @@
       }
     }
     @media (max-width: 1050px) {
-      flex-wrap: wrap; min-height: auto;
+      flex-wrap: wrap; height: auto;
       .service-item {
         width: 100%; border-right: none;
         &:not(:last-child) {
@@ -296,7 +361,7 @@
           }
         }
         .btn-round {
-          width: 35px; height: 35px; line-height: 33px; top: 12px; font-size: 23px;
+          width: 35px; height: 35px; line-height: 35px; top: 12px; font-size: 23px;
         }
       }
     }
@@ -310,7 +375,7 @@
   .testimonial-item {
     margin: 0 15px; background: $color-white; position: relative; padding-bottom: 70px;
     .image {
-      border-bottom: 1px solid $color-border; margin-bottom: 40px; height: 96px; display: flex; justify-content: center; align-items: center;
+      border-bottom: 1px solid $color-border; margin-bottom: 29px; height: 96px; display: flex; justify-content: center; align-items: center;
       img {
         display: inline-block;
       }
@@ -326,6 +391,9 @@
           max-width: none;
         }
       }
+      @media (max-width: 767px) {
+        padding: 0 20px 15px; margin-bottom: 20px;
+      }
     }
     .user-info {
       font-size: 14px; line-height: 20px; padding: 0 30px; position: absolute; bottom: 30px;
@@ -334,6 +402,9 @@
       }
       .activity {
         color: $color-gray-text;
+      }
+      @media (max-width: 767px) {
+        padding: 0 15px;
       }
     }
     &:focus {
@@ -370,6 +441,15 @@
       }
       &.slick-prev {
         left: auto; right: 70px;
+      }
+    }
+    @media (max-width: 767px) {
+      top: 50%; transform: translateY(-50%); width: 30px; height: 30px;
+      &.slick-next {
+        right: -10px;
+      }
+      &.slick-prev {
+        left: -13px; right: auto;
       }
     }
   }

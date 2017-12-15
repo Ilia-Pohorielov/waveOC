@@ -9,18 +9,26 @@
   .team {
     display: flex; margin-bottom: 30px;
     .team-item {
-      width: 25%; text-align: center;
+      width: 25%; text-align: center; opacity: 0; transition: all .4s cubic-bezier(0.13, 0.12, 0.88, 0.9);
       .image {
-       display: inline-block; @include image-circle(83px,83px, 83px, 2px solid $color-border); margin-bottom: 27px;
+       display: inline-block; @include image-circle(83px,83px, 83px, 2px solid $color-border); margin-bottom: 27px; opacity: 0; transition: all .4s cubic-bezier(0.13, 0.12, 0.88, 0.9);
         img {
           display: inline-block; vertical-align: middle;
         }
       }
       .description {
-        font-size: 18px; font-weight: 500; padding: 0 10px;
+        font-size: 18px; font-weight: 500; padding: 0 10px; transform: translateY(20%); opacity: 0; transition: all .4s cubic-bezier(0.13, 0.12, 0.88, 0.9);
       }
       &:not(:last-child) {
         border-right: 1px solid $color-border;
+      }
+      @include animation-delay(4,.2) {
+        .image {
+          transition-delay: inherit;
+        }
+        .description {
+          transition-delay: inherit;
+        }
       }
     }
     @media (max-width: 800px) {
@@ -44,6 +52,17 @@
   .description-team {
     text-align: center; font-size: 16px; line-height: 24px; padding: 0 10px;
   }
+  &.animated {
+    .team-item {
+      opacity: 1;
+      .image {
+        opacity: 1;
+      }
+      .description {
+        opacity: 1; transform: translateY(0);
+      }
+    }
+  }
   @media (max-width: 800px) {
     margin-bottom: 25px;
   }
@@ -60,15 +79,15 @@
         content: ''; display:block; background: rgba($color-text, .2); position: absolute; top:0; left: 0; right: 0; height: 100%; opacity: 0; transition: all 0.3s cubic-bezier(0.43, -0.04, 0.35, 0.73); z-index: 0;
       }
       .description {
-        position: absolute; bottom: 0; color: $color-white; padding: 0 40px; transform: translateY(75%); transition: all 0.3s cubic-bezier(0.43, -0.04, 0.35, 0.73); z-index: 1;
+        position: absolute; bottom: 0; color: $color-white; padding: 0 40px; transform: translateY(67%); transition: all 0.3s cubic-bezier(0.43, -0.04, 0.35, 0.73); z-index: 1;
         .title-project {
-          font-size: 18px; font-weight: 500;  margin-bottom: 30px; text-transform: uppercase;
+          font-size: 18px; font-weight: 500; margin-bottom: 20px; text-transform: uppercase;
           @media (max-width: 370px) {
             margin-bottom: 20px;
           }
         }
         .text {
-          font-size: 14px; line-height: 22px; margin-bottom: 50px;
+          font-size: 14px; line-height: 22px; margin-bottom: 46px; opacity: 0; transition: all .3s ease;
           @media (max-width: 370px) {
             margin-bottom: 20px;
           }
@@ -83,6 +102,9 @@
         }
         .description {
           transform: translateY(0);
+          .text {
+            opacity: 1;
+          }
         }
       }
     }
@@ -127,13 +149,14 @@
       }
     }
     .right-item {
-      display: flex; margin-bottom: 30px; align-items: center;
+      display: flex; margin-bottom: 30px; align-items: center; transition: all .4s cubic-bezier(0.13, 0.12, 0.88, 0.9); opacity: 0; transform: translateY(30%);
       .text {
         font-size: 14px; line-height: 20px;
       }
       .image {
         flex-shrink: 0; margin-right: 20px;
       }
+      @include animation-delay(3, .2);
       @media (max-width: 600px) {
         flex-direction: column; justify-content: center;
         .image {
@@ -157,6 +180,11 @@
       padding: 25px 0;
     }
   }
+  &.animated {
+    .right-item {
+      opacity: 1; transform: translateY(0);
+    }
+  }
 }
 .block-benefits {
   margin-bottom: 31px;
@@ -164,6 +192,7 @@
     display: flex; flex-wrap: wrap;
     .benefits-item {
       max-width: 490px; width: 32%; border: 1px solid $color-border; border-radius: 2px; background: $color-gray; padding: 30px 40px; display: flex; align-items: center; justify-content: space-between; margin-bottom: 30px;
+      opacity: 0; transform: translateY(20%); transition: all .4s cubic-bezier(0.13, 0.12, 0.88, 0.9);
       .description {
         font-size: 18px; line-height: 24px; font-weight: 500;
       }
@@ -173,6 +202,7 @@
       &:not(:nth-child(3n)) {
         margin-right: 30px;
       }
+      @include animation-delay(5, .3);
       @media (max-width: 1530px) {
         &:not(:nth-child(3n)) {
           margin-right: 25px;
@@ -203,17 +233,22 @@
       justify-content: center;
     }
   }
+  &.animated {
+    .benefits-item {
+      opacity: 1; transform: translateY(0);
+    }
+  }
 }
 .block-offer {
-  position: relative; margin-bottom: 71px;
+  position: relative; /*margin-bottom: 71px;*/
   .bg-offer {
-    padding: 0 0 30.7%; background-size: cover; background-position: 50% 50%; background-attachment: fixed; background-repeat: no-repeat; position: relative; min-height: 530px;
+    padding: 0 0 20%; background-size: cover; background-position: 50% 50%; background-attachment: fixed; background-repeat: no-repeat; position: relative; min-height: 250px;
     &:before {
       content: ''; display: block; position: absolute; top: 0; left: 0; right: 0; height: 100%; background: rgba($color-black, .3);
     }
   }
   .title-offer {
-    font-size: 35px; font-weight: 500; line-height: 34px; color: $color-white; padding-top: 100px; position: relative; text-align: center; max-width: 625px; margin: 0 auto 80px auto;
+    font-size: 35px; font-weight: 500; line-height: 34px; color: $color-white; padding-top: 100px; position: relative; text-align: center; max-width: 625px; margin: 0 auto;
     &:before {
       content: ''; display: block; position: absolute; top: 0; left: 50%; transform: translateX(-50%); background: url("../images/logo-title.svg")no-repeat 0 0; width: 66px; height: 76px; background-size: contain;
     }
@@ -222,15 +257,15 @@
     }
   }
   .offer-content {
-    position: absolute; top: 9.3%; left: 0; right: 0;
-    @media (max-width: 1100px) {
+    position: absolute; /*top: 9.3%;*/ left: 0; right: 0; top: 50%; transform: translateY(-50%);
+/*    @media (max-width: 1100px) {
       top: 2.3%;
-    }
+    }*/
   }
   .offer-table {
     position: relative; padding-left: 15.66%; overflow: hidden; margin-top: -255px;
     .left-sidebar {
-      position: absolute; top: 14%; left: 0; max-width: 242px; width: 15.7%;
+      position: absolute; top: 14.1%; left: 0; max-width: 242px; width: 15.7%;
       ul {
         border: 1px solid $color-border;
         li {

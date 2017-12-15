@@ -49,15 +49,32 @@
 .block-expectation {
   display: flex; padding: 104px 0 109px;
   .title-expectation {
-    width: 34%; font-size: 25px; line-height: 32px; font-weight: 500; margin-right: 10px; flex-shrink: 0;
+    width: 33%; font-size: 25px; line-height: 32px; font-weight: 500; margin-right: 10px; flex-shrink: 0;
   }
   .expectation {
-    display: flex; width: 66%;
+    display: flex; width: 66%; justify-content: space-between;
     .expectation-item {
-      width: 25%; padding-left: 20px; border-left: 2px solid $color-text; font-size: 16px; line-height: 24px;
-      .count {
-        font-size: 50px; display: block; line-height: 48px; font-weight: 300; margin-top: 9px;
+      width: 24%; padding-left: 20px; font-size: 16px; line-height: 24px; position: relative; transition: all .3s cubic-bezier(0.13, 0.12, 0.88, 0.9);
+      .text {
+        opacity: 0; transition: all .3s .5s cubic-bezier(0.13, 0.12, 0.88, 0.9);
       }
+      .count {
+        font-size: 50px; display: block; line-height: 48px; font-weight: 300; margin-top: 13px; transition: all .3s .6s cubic-bezier(0.13, 0.12, 0.88, 0.9); transform: translateY(10%); opacity: 0;
+      }
+      &:before {
+        content: ''; display: block; width: 2px; background: $color-text; height: 0; position: absolute; top: 0; left: 0; transition: all .5s cubic-bezier(0.13, 0.12, 0.88, 0.9);
+      }
+      @include animation-delay(4,.4) {
+        .text {
+          transition-delay: inherit;
+        }
+        .count {
+          transition-delay: inherit;
+        }
+        &:before {
+          transition-delay: inherit;
+        }
+      };
     }
     @media (max-width: 1300px) {
       flex-wrap: wrap; justify-content: center;
@@ -74,6 +91,13 @@
       .expectation-item {
         width: 100%;
       }
+    }
+  }
+  &.animated {
+    .expectation-item {
+      .text { opacity: 1; }
+      .count { transform: translateY(0); opacity: 1; }
+      &:before { height: 100%; }
     }
   }
   @media (max-width: 767px) {

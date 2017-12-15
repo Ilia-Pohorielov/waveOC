@@ -4,3 +4,5 @@
 //= plugins/materialize.min.js
 //= plugins/validate.js
 //= plugins/mask.js
+//= plugins/ScrollMagic.min.js
+//= plugins/debug.addIndicators.min.js

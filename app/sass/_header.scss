@@ -2,7 +2,7 @@ header {
   position: relative;
 }
 .header-container {
-  display: flex; justify-content: space-between;
+  display: flex; justify-content: space-between; align-items: center;
   &:before {
     content: ''; display: none; height: 100vh; position: absolute; top: 0; left: 0; background: rgba($color-black, .4); width: 100%; z-index: 20;
   }
@@ -16,7 +16,7 @@ header {
   }
 }
 .hamburger {
-  position: relative; width: 50px; height: 30px; cursor: pointer; display: none; top: 22px;
+  position: relative; width: 50px; height: 30px; cursor: pointer; display: none; top: 0;
   i {
     display:block; height: 4px; width: 100%; position: absolute; top: 50%; margin-top: -2px; background: $color-white; transition: all .3s cubic-bezier(0.39, 1.13, 1, 0.89); border-radius: 3px;
   }
@@ -45,7 +45,7 @@ header {
   }
 }
 .hamburger-close {
-  position: absolute; width: 50px; height: 30px; cursor: pointer; display: none; top: 20px; right: 10px;
+  position: absolute; width: 35px; height: 35px; cursor: pointer; display: none; top: 20px; right: 10px;
   i {
     display:block; height: 4px; width: 100%; position: absolute; top: 50%; margin-top: -2px; background: $color-black; transition: all .3s cubic-bezier(0.39, 1.13, 1, 0.89); opacity: 0;
   }
@@ -65,12 +65,12 @@ header {
 .top-header {
   position: fixed; top: 0; left: 0; right: 0; background: rgba($color-white, .1); border-bottom: 1px solid rgba($color-white, .2); z-index: 20; transition: all .3s cubic-bezier(0.39, 1.13, 1, 0.89);
   .logo {
-    padding-top: 6px; position: relative;
+    width: 170px; position: relative; flex-shrink: 1;
     a {
-      width: 170px; display: inline-block; transition: all .3s cubic-bezier(0.39, 1.13, 1, 0.89);
+      display: block; transition: all .3s cubic-bezier(0.39, 1.13, 1, 0.89);
       z-index: 10;
       .logo-sticky {
-        transform: scale(0); display: none;
+        display: none;
       }
     }
   }
@@ -89,17 +89,20 @@ header {
     }
     @media (max-width: 840px) {
       position: fixed; right: 0; top: 0; max-width: 300px; flex-direction: column; line-height: normal; background: $color-white; padding: 60px 15px; height: 100vh; justify-content: flex-start; z-index: 100;
-      transform: translateX(100%); visibility: hidden; opacity: 0; transition: all .3s cubic-bezier(0.39, 1.13, 1, 0.89);
+      transform: translateX(100%); visibility: hidden; opacity: 0; transition: all .3s cubic-bezier(0.39, 1.13, 1, 0.89); text-align: center;
       ul {
         flex-direction: column; width: 100%; margin-bottom: 20px;
         li {
           a {
-            color: $color-black; margin: 0;
+            color: $color-black; margin: 0; text-align: center;
           }
           &:not(:last-child) {
             margin-bottom: 15px;
           }
         }
+      }
+      .btn {
+        margin: 0 auto;
       }
       &.open {
         visibility: visible; opacity: 1;
@@ -114,8 +117,8 @@ header {
       }
     }
     .logo a {
-      .logo-main { transform: scale(0); display: none; }
-      .logo-sticky { transform: scale(1); display: block; }
+      .logo-main {display: none; }
+      .logo-sticky { display: block; }
     }
     .header-menu {
       ul li a {
@@ -144,22 +147,28 @@ header {
   }
   .description-header {
     position: absolute; top: 33.4%; text-align: center; font-size: 45px; font-weight: 500; color: $color-white; max-width: 1000px; margin: 0 auto; line-height: 55px;
-    left: 0; right: 0;
+    left: 0; right: 0; width: 100%;
     .text {
       margin-bottom: 29px; display: block;
     }
-    @media (max-width: 991px) {
+    @media (max-width: 1154px) {
       font-size: 35px; line-height: normal;
     }
+    @media (max-width: 991px) {
+      font-size: 25px;
+      .text {
+        margin-bottom: 15px;
+      }
+    }
     @media (max-width: 840px) {
-      font-size: 25px; max-width: 500px;
+      max-width: 500px;
     }
     @media (max-width: 500px) {
       display: none;
     }
   }
   .partners {
-    position: absolute; bottom: 47px; left: 0; right: 0; max-width: 1530px; margin: 0 auto; padding: 0 15px;
+    position: absolute; bottom: 47px; left: 0; right: 0; max-width: 1530px; margin: 0 auto; padding: 0 15px; width: 100%;
     ul {
       display: flex; justify-content: space-between; align-items: center;
       li {

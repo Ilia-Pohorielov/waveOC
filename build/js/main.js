@@ -17,27 +17,21 @@ $(window).scroll(function() {
 
 /* begin accordion footer */
 if ($(window).width() <= 767) {
-    $(window).on('resize', function () {
-        $('.js-nav-title').click(function() {
-            $(this).toggleClass("rotate");
-            $(this).next("ul").slideToggle();
-        });
-    });
-    $(window).on('load', function () {
-        $('.js-nav-title').click(function() {
-            $(this).toggleClass("rotate");
-            $(this).next("ul").slideToggle();
-        });
+    $('.js-nav-title').click(function() {
+        $(this).toggleClass("rotate");
+        $(this).next("ul").slideToggle();
     });
 }
 /* end accordion footer */
 /* begin mobile menu */
 $('.js-mobile-menu').on('click', function () {
+    $('body').css('overflow', 'hidden');
    $(this).toggleClass('active');
    $('.header-container').toggleClass('open');
 });
 
 $('.js-menu-close').on('click', function () {
+    $('body').css('overflow', 'inherit');
     $('.js-mobile-menu').removeClass('active');
    $('.header-container').removeClass('open');
 });
@@ -56,7 +50,9 @@ function heightEL(el) {
         elH[i].style.height = maxHeight + "px";
     }
 }
-heightEL($('.testimonial-item.height'));
+if ($(window).width() >= 767) {
+    heightEL($('.testimonial-item.height'));
+}
 heightEL($('.service-item .height'));
 if ($(window).width() > 767) {
     $(window).on('resize', function () {
@@ -71,17 +67,9 @@ if ($(window).width() > 767) {
 /*end height block */
 /*begin choosing mobile*/
 if ($(window).width() <= 1050) {
-    $(window).on('resize', function () {
-        $('.title-service').click(function() {
-            $(this).parents('.service-item').toggleClass("opened");
-            $(this).next(".description").slideToggle();
-        });
-    });
-    $(window).on('load', function () {
-        $('.title-service').click(function() {
-            $(this).parents('.service-item').toggleClass("opened");
-            $(this).next(".description").slideToggle();
-        });
+    $('.title-service').click(function() {
+        $(this).parents('.service-item').toggleClass("opened");
+        $(this).next(".description").slideToggle();
     });
 }
 /*end hover choosing*/
@@ -104,8 +92,7 @@ $('.js-slider-testimonial').slick({
             settings: {
                 slidesToShow: 1,
                 slidesToScroll: 1,
-                infinite: true,
-                arrows: false
+                infinite: true
             }
         }
     ]
@@ -147,3 +134,94 @@ file_input.on('change',function(e) {
 $('body').on('click', '.js-remove', function () {
    $(this).parent().remove();
 });
+/* initialize animation */
+var controller = new ScrollMagic.Controller();
+
+/* homepage animation trigger */
+new ScrollMagic.Scene({
+    triggerElement: '.description-company',
+    triggerHook: .7,
+    reverse: false
+})
+    .setClassToggle('.description-company', 'animated')
+    .addTo(controller);
+
+new ScrollMagic.Scene({
+    triggerElement: '.why-control',
+    triggerHook: .5,
+    reverse: false
+})
+    .setClassToggle('.why-control', 'animated')
+    .addTo(controller);
+
+new ScrollMagic.Scene({
+    triggerElement: '.our-services:not(.page-services)',
+    triggerHook: .5,
+    reverse: false
+})
+    .setClassToggle('.our-services:not(.page-services)', 'animated')
+    .addTo(controller);
+
+new ScrollMagic.Scene({
+    triggerElement: '.block-linkedin',
+    triggerHook: .8,
+    reverse: false
+})
+    .setClassToggle('.block-linkedin', 'animated')
+    .addTo(controller);
+/* solutions animation trigger */
+new ScrollMagic.Scene({
+    triggerElement: '.block-expectation',
+    triggerHook: .8,
+    reverse: false
+})
+    .setClassToggle('.block-expectation', 'animated')
+    .addTo(controller);
+/* project animation trigger */
+new ScrollMagic.Scene({
+    triggerElement: '.block-team',
+    triggerHook: .6,
+    reverse: false
+})
+    .setClassToggle('.block-team', 'animated')
+    .addTo(controller);
+
+new ScrollMagic.Scene({
+    triggerElement: '.project-description',
+    triggerHook: .6,
+    reverse: false
+})
+    .setClassToggle('.project-description', 'animated')
+    .addTo(controller);
+
+new ScrollMagic.Scene({
+    triggerElement: '.block-benefits',
+    triggerHook: .6,
+    reverse: false
+})
+    .setClassToggle('.block-benefits', 'animated')
+    .addTo(controller);
+/* services animation trigger */
+new ScrollMagic.Scene({
+    triggerElement: '.block-expertise',
+    triggerHook: .7,
+    reverse: false
+})
+    .setClassToggle('.block-expertise', 'animated')
+    .addTo(controller);
+/* about animation trigger */
+new ScrollMagic.Scene({
+    triggerElement: '.block-philosophy',
+    triggerHook: .6,
+    reverse: false
+})
+    .setClassToggle('.block-philosophy', 'animated')
+    .addTo(controller);
+
+new ScrollMagic.Scene({
+    triggerElement: '.block-mission',
+    triggerHook: .6,
+    reverse: false
+})
+    .setClassToggle('.block-mission', 'animated')
+    .addTo(controller);

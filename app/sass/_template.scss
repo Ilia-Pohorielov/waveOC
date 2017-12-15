@@ -25,6 +25,14 @@ $color-gray-title: #f2f2f2;
 @mixin image-circle($width, $height, $line-height, $border){
   width: $width; height: $height; border-radius: 50%; text-align: center; line-height: $line-height; flex-shrink: 0; background: $color-text; border: $border;
 }
+@mixin animation-delay ($count, $time) {
+  @for $i from 2 through $count {
+    &:nth-child(#{$i}) {
+      transition-delay: #{($i * $time)}s;
+      @content
+    }
+  }
+}
 body {
   background: $color-white; color: $color-text;
 }
@@ -32,7 +40,7 @@ blockquote {
   display: block; border-left: 2px solid $color-text; padding-left: 30px; font-size: 22px; line-height: 30px; margin: 24px 0;
 }
 a {
-  color: $color-text;
+  color: $color-text; transition: all .3s ease;
   &:hover, &:focus, &:active {
     color: $color-blue;
   }
@@ -92,8 +100,8 @@ sup {
 /* END TITLE */
 /** BEGIN BTN STYLE **/
 .btn {
-  width: 100%; max-width: 166px; border-radius: 2px; text-align: center; text-transform: uppercase; color: $color-white; background: $color-blue; padding: 16px 0 17px;
-  height: auto; line-height: normal; letter-spacing: normal; font-size: 14px; font-weight: 500; box-shadow: none;
+  width: 100%; max-width: 166px; border-radius: 2px; text-align: center; text-transform: uppercase; color: $color-white; background: $color-blue; padding: 16px 0 14px;
+  height: auto; line-height: initial; letter-spacing: normal; font-size: 14px; font-weight: 500; box-shadow: none; vertical-align: baseline;
   &.btn-white {
     background: transparent; border: 1px solid $color-white;
     &:hover, &:focus, &:active {
@@ -127,9 +135,18 @@ sup {
 .breadcrumbs {
   display: flex; font-size: 12px;
   li {
-    position: relative;
+    position: relative; color: $color-white;
     a, span {
-      display: block; color: rgba($color-white, .6);
+      display: block; color: rgba($color-white, .6); transition: all .3s ease;
+      &:hover, &:focus, &:active {
+        color: $color-white;
+      }
+    }
+    span {
+      color: $color-white; transition: all .3s ease;
+      &:hover, &:focus, &:active {
+        color: rgba($color-white, .6);
+      }
     }
     &:not(:last-child) {
       padding-right: 8px; margin-right: 4px;
@@ -139,7 +156,7 @@ sup {
     }
   }
 }
-/*EMD BREADCRUMBS */
+/*END BREADCRUMBS */
 .header-inner {
   .header-image {
     max-height: 647px; padding: 0 0 34%;

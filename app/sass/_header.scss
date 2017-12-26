@@ -75,9 +75,8 @@ header {
     }
   }
   .header-menu {
-    background: transparent; height: 75px; line-height: 75px; box-shadow: none; display: flex; align-items: baseline; justify-content: flex-end; padding: 0 18px;
+    background: transparent; height: 75px; line-height: 75px; box-shadow: none; display: flex; align-items: center; justify-content: flex-end; padding: 0 18px; width: 89%;
     ul {
-      display: flex; justify-content: flex-end;
       li {
         a {
           display: block; color: rgba($color-white, .5); font-weight: bold; text-transform: uppercase; transition: all .3s ease; margin: 0 21px; padding: 0;
@@ -93,6 +92,7 @@ header {
       ul {
         flex-direction: column; width: 100%; margin-bottom: 20px;
         li {
+          float: none;
           a {
             color: $color-black; margin: 0; text-align: center;
           }
@@ -151,6 +151,9 @@ header {
     .text {
       margin-bottom: 29px; display: block;
     }
+    @media (max-width: 1366px) {
+      font-size: 35px; line-height: normal;
+    }
     @media (max-width: 1154px) {
       font-size: 35px; line-height: normal;
     }
@@ -184,6 +187,9 @@ header {
       display: none;
     }
   }
+}
+.header-contact {
+
 }
 .header-404 {
   .top-header {

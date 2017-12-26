@@ -175,7 +175,7 @@
     }
   }
   &.project-description {
-    padding: 95px 0 75px; margin-bottom: 54px;
+    padding: 95px 0 75px;
     @media (max-width: 991px) {
       padding: 25px 0;
     }
@@ -376,6 +376,82 @@
         }
         &:not(:nth-child(2n)) {
           border-right: 1px solid $color-border;
+        }
+      }
+    }
+  }
+}
+.salesforce-group {
+  background: $color-bg-map; padding: 65px 0;
+  .block-salesforce {
+    max-width: 980px; margin: 0 auto; position: relative;
+  }
+  .text {
+    width: 75%;
+  }
+  .title-salesforce {
+    font-size: 20px; line-height: 25px; font-weight: 500; margin-bottom: 20px;
+  }
+  .image {
+    width: 21%; display: flex; justify-content: center; position: relative; flex-shrink: 0;
+  }
+  .main-salesforce {
+    display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 40px; position: relative;
+    .image {
+      background: $color-bg-map; align-items: flex-start;
+    }
+    &:before {
+      content: ''; display: block; width: 1px;  position: absolute; left: 10.5%; background: $color-blue-bg; height: 100%; top: 28%;
+    }
+  }
+  .salesforce {
+    position: relative;
+    &:before {
+      content: ''; display: block; width: 1px;  position: absolute; left: 10.5%; background: $color-blue-bg; height: 98%; top: 0%;
+    }
+    li {
+      display: flex; align-items: center; margin-bottom: 40px; overflow: hidden; justify-content: space-between; position: relative;
+      .wrap {
+        width: 70px; height: 70px; border-radius: 50%; border: 1px solid $color-blue-bg; text-align: center; line-height: 70px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; background: $color-bg-map;
+        img {
+          max-width: 25px;
+        }
+      }
+      &:last-child {
+        .image:after {
+          content: none;
+        }
+      }
+    }
+  }
+  @media (max-width: 767px) {
+    padding: 25px 0;
+    .text {
+      width: 100%;
+    }
+    .main-salesforce {
+      flex-direction: column; align-items: center; margin-bottom: 20px;
+      .image {
+        margin-bottom: 15px;
+      }
+      .text {
+        text-align: center;
+      }
+      &:before {
+        content: none;
+      }
+    }
+    .salesforce  {
+      &:before {
+        content: none;
+      }
+      li {
+        flex-direction: column; margin-bottom: 20px;
+        .image {
+          margin-bottom: 15px;
+        }
+        .text {
+          text-align: center;
         }
       }
     }

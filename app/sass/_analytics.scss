@@ -139,20 +139,26 @@
     font-size: 25px; font-weight: 500; margin-bottom: 30px; line-height: 30px;
   }
   .description-text {
-    display: flex; padding-left: 34px; border-left: 2px solid $color-white; justify-content: space-between;
-    .text {
-      font-size: 18px; line-height: 26px; width: 43%; color: rgba($color-white, .8); margin-right: 95px;
-      &.sub-text {
-        font-size: 16px; line-height: 24px; width: 46%; margin-right: 0;
+    display: flex;  justify-content: space-between;
+    .main-text {
+      width: 43%;
+      .text {
+        font-size: 18px; line-height: 26px; color: rgba($color-white, .8); margin-right: 95px; padding-left: 34px; border-left: 2px solid $color-white;
       }
+    }
+    .sub-text {
+      font-size: 16px; line-height: 24px; width: 46%; color: rgba($color-white, .8);
     }
     @media (max-width: 991px) {
       flex-direction: column;
-      .text {
+      .main-text {
         width: 100%; margin-bottom: 15px;
-        &.sub-text {
-          width: 100%;
+        .text {
+          margin-right: 0;
         }
+      }
+      .sub-text {
+        width: 100%;
       }
     }
   }

@@ -17,11 +17,11 @@
   }
 }
 .info-block {
-  display: flex; align-items: flex-start; padding: 52px 0 58px;
+  display: flex; padding: 52px 0 58px;
   .title-info {
     width: 42%;
   }
-  .text {
+  > .text {
     width: 57%; font-size: 16px; line-height: 24px;
   }
   @media (max-width: 600px) {

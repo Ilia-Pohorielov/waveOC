@@ -4,6 +4,16 @@
     padding: 25px 0 25px;
   }
 }
+.questions-feedback {
+  max-width: 900px;
+  margin: 0 auto 40px;
+  display: flex;
+  justify-content: space-between;
+  li {
+    font-size: 18px;
+    text-align: center;
+  }
+}
 .block-team {
   background: $color-white; border: 1px solid $color-border; border-radius: 2px; padding: 44px 0 55px; margin-bottom: 54px;
   .team {
@@ -455,5 +465,173 @@
         }
       }
     }
+  }
+}
+.top-description {
+  padding: 50px 0 0;
+}
+.top-description .breadcrumbs {
+  margin: 0 0 10px;
+}
+.top-description .title {
+  margin-bottom: 65px;
+}
+.title-annotation {
+  font-size: 30px;
+  line-height: 40px;
+  margin-bottom: 30px;
+}
+.title-annotation  span {
+  display: block;
+  font-size: 25px;
+  line-height: 30px;
+  font-weight: normal;
+}
+.title-annotation  span b {
+  font-weight: 500;
+}
+.salesforce-group .salesforce:before , .salesforce-group .main-salesforce:before{
+  display: none;
+}
+.annotation ol {
+  list-style-position: inside;
+  margin: 0;
+  padding: 0;
+  font-size: 25px;
+  line-height: 30px;
+}
+.anotation-head {
+  display: block;
+  margin-bottom: 15px;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 34px;
+}
+.salesforce-group-top {
+  padding: 55px 0 35px;
+}
+.salesforce-group-top__head {
+  display: inline-block;
+  vertical-align: top;
+  width: 510px;
+  padding-right: 50px;
+  max-width: 40%;
+  font-size: 25px;
+  line-height: 30px;
+  color: #3b4248;
+  font-weight: 500;
+}
+.salesforce-group-top__head:after {
+  content: '';
+  display: block;
+  margin-top: 27px;
+  width: 43px;
+  height: 2px;
+  background: #3b4248;
+}
+.salesforce-group-top__info {
+  display: inline-block;
+  vertical-align: top;
+  width: calc(100% - 515px);
+  font-size: 16px;
+  line-height: 24px;
+}
+.salesforce-group-top__info p {
+  margin-bottom: 15px;
+}
+.salesforce-group .text {
+  width: 100%;
+  text-align: center;
+
+}
+.salesforce-group .main-salesforce {
+  margin-bottom: 0px
+
+}
+.salesforce-group .salesforce {
+  font-size: 0;
+  line-height: 0;
+  /*padding-top: 75px;*/
+}
+.salesforce-group .salesforce li {
+  display: inline-block;
+  vertical-align: top;
+  width: 20%;
+  padding: 0 25px;
+  padding-top: 75px;
+  overflow: visible;
+  margin: 0;
+  font-size: 16px;
+  line-height: 24px;
+}
+.salesforce-group .salesforce li.gen {
+  width: 100%;
+  position: relative;
+}
+.salesforce-group .salesforce li.gen:after {
+  content: '';
+  position: absolute;
+
+  top: 60%;
+  left: 0;
+  right: 0;
+  height: 147px;
+  background: url(../images/img2.png) 50% 50% no-repeat;
+}
+.salesforce-group .salesforce li.gen img{
+  margin: 0 auto;
+}
+.salesforce-group .salesforce li .wrap {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 65px;
+  margin-bottom: 23px;
+}
+.salesforce-group .salesforce li .wrap img {
+  display: inline-block;
+  vertical-align: middle;
+}
+.salesforce-group .image {
+  display: block;
+  width: auto;
+
+}
+@media only screen and (max-width: 1500px) {
+  .salesforce-group .salesforce li.gen:after {
+    display: none;
+  }
+}
+@media only screen and (max-width: 1300px) {
+  .salesforce-group .salesforce {text-align: center;}
+  .salesforce-group .salesforce li {
+    width: 33%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+@media only screen and (max-width: 1023px) {
+  .salesforce-group-top__head {
+    width: 100%;
+    max-width: 100%;
+    padding-right: 0;
+    text-align: center;
+  }
+  .salesforce-group-top__info {
+    width: 100%;
+    padding-top: 40px;
+  }
+  .salesforce-group-top__head:after {margin: 30px auto 0}
+  .top-description {padding-top: 0;}
+}
+@media only screen and (max-width: 767px) {
+  .salesforce-group .salesforce li {
+    width: 50%;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .salesforce-group .salesforce li {
+    width: 100%;
+    padding-top: 30px;
   }
 }
